@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <path
+    d="M32 2C48.568 2 62 15.432 62 32C62 48.568 48.568 62 32 62C15.432 62 2 48.568 2 32C2 15.432 15.432 2 32 2Z"
+    fill="#5A0F14"
+  />
+  <path
+    d="M32 14C41.941 14 50 22.059 50 32C50 41.941 41.941 50 32 50C22.059 50 14 41.941 14 32C14 22.059 22.059 14 32 14Z"
+    fill="#C7362E"
+    opacity="0.95"
+  />
+  <path
+    d="M24 33.5L30.5 40L42 26.5"
+    stroke="#F5F5F5"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
