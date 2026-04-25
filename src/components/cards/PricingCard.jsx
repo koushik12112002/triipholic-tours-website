@@ -16,15 +16,23 @@ export default function PricingCard({ priceOriginal, priceFrom, whatsappNumber =
             className="space-y-4 rounded-2xl border border-white/10 bg-gradient-to-br from-wine-accent/10 to-transparent p-6 shadow-soft"
         >
             <div>
-                <p className="text-xs font-semibold tracking-[0.2em] text-wine-muted">STARTING FROM</p>
-                <div className="mt-2 flex items-baseline gap-2">
-                    <span className="text-2xl font-bold text-wine-light">₹{priceFrom.toLocaleString()}</span>
-                    <span className="text-sm text-wine-muted line-through">₹{priceOriginal.toLocaleString()}</span>
-                </div>
-                <p className="mt-1 text-xs text-wine-accent">
-                    Save ₹{savings.toLocaleString()} ({savingsPercent}% off)
+                <p className="text-xs font-semibold tracking-[0.2em] text-wine-muted">
+                    {priceFrom ? 'STARTING FROM' : 'PRICE'}
                 </p>
-                <p className="mt-1 text-xs text-wine-muted">Per Person</p>
+                <div className="mt-2 flex items-baseline gap-2">
+                    <span className="text-2xl font-bold text-wine-light">
+                        {priceFrom ? `₹${priceFrom.toLocaleString()}` : 'On Request'}
+                    </span>
+                    {!!priceOriginal && (
+                        <span className="text-sm text-wine-muted line-through">₹{priceOriginal.toLocaleString()}</span>
+                    )}
+                </div>
+                {priceFrom > 0 && priceOriginal > 0 && (
+                    <p className="mt-1 text-xs text-wine-accent">
+                        Save ₹{savings.toLocaleString()} ({savingsPercent}% off)
+                    </p>
+                )}
+                <p className="mt-1 text-xs text-wine-muted">{priceFrom ? 'Per Person' : 'Contact us for details'}</p>
             </div>
 
             <motion.a

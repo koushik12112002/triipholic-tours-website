@@ -1,230 +1,537 @@
 export const tourPackages = [
   {
-    id: 'kenya-east-africa',
-    slug: 'kenya-east-africa',
-    title: 'Kenya - East Africa',
-    tagline: 'I Packed, I Flew, I Lived It',
-    location: 'Nairobi • Maasai Mara • Nakuru • Amboseli',
-    duration: '8N / 9D',
-    priceFrom: 214999,
-    priceOriginal: 249599,
-    image:
-      'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Safari game drives', 'Maasai Mara wildlife', 'Lake Nakuru', 'Mount Kilimanjaro views'],
-    pickupDrop: 'Pickup from Kolkata and Drop to Kolkata',
+    id: 'darjeeling-regular-2n-3d',
+    slug: 'darjeeling-regular-2n-3d',
+    title: '2 Night 3 Days Darjeeling Tour Regular Package',
+    tagline: 'Experience the Queen of the Hills',
+    location: 'NJP/Siliguri • Darjeeling • Mirik',
+    duration: '2N / 3D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80',
+    highlights: ['Darjeeling Mall Road', 'Tiger Hill Sunrise', 'Mirik Lake', 'Tea Gardens'],
+    pickupDrop: 'Pickup from NJP/Siliguri/Bagdogra and Drop to NJP/Siliguri/Bagdogra',
     inclusions: [
-      'Round-trip economy airfare (CCU – NBO – CCU)',
-      'Airport arrival & departure assistance',
-      'Hotel accommodations',
-      'All transfers in air-conditioned coach',
-      'Game drives in 4×4 Land Cruiser',
-      'Daily breakfast, lunch, and dinner',
-      'All mentioned sightseeing and activities',
-      'Professional driver/guide',
-      'All national park entry fees',
-      'Visa charges',
-      'Travel insurance (up to 70 years of age)',
+      'Comfortable Accommodation',
+      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
+      'Transport: Hassle-free transportation. (Personal reservation car)',
+      'Personalized Experiences: Plan your trip to suit your interests and preferences',
     ],
-    exclusions: ['Tips', 'Personal expenses', 'Additional activities not mentioned'],
+    exclusions: [
+      'Outside food and Water',
+      'Entry fees',
+      'Parking charges',
+      'Any other charges that are not mentioned in the package',
+    ],
     itinerary: [
       {
         day: 1,
-        title: 'Arrive in Nairobi',
+        title: 'NJP/Siliguri Jn./Bagdogra to Darjeeling',
         description:
-          'Arrive at Jomo Kenyatta International Airport. Meet and greet by our representative. Transfer to your hotel in Nairobi. Evening at leisure to relax after your journey.',
+          '🚗 Sightseeing en route:\n' +
+          '1. Kurseong\n' +
+          '2. Kurseong Valley View Point\n' +
+          '3. Ghoom Railway Station\n' +
+          '4. Ghoom Railway Museum\n' +
+          '5. Ghoom Monastery\n' +
+          '6. Batasia Loop\n' +
+          '7. Mall Road\n\n' +
+          '🛌 Night Stay: Darjeeling (Hotel is 4-5 min walking distance from Mall Road).',
       },
       {
         day: 2,
-        title: 'Maasai Mara Game Drive',
+        title: 'Darjeeling 10 Points Sightseeing',
         description:
-          'After breakfast, depart for Maasai Mara National Reserve. Arrive and check in to your lodge. Afternoon game drive to spot the Big Five and other wildlife. Return to lodge for dinner.',
+          '🌅 Early Morning:\n' +
+          '1. Tiger Hill (if possible, depends upon weather)\n\n' +
+          '☀️ After Breakfast:\n' +
+          '2. Japanese Temple\n' +
+          '3. Peace Pagoda\n' +
+          '4. Padmaja Naidu Himalayan Zoological Park (Zoo)\n' +
+          '5. Himalayan Mountaineering Institute (HMI)\n' +
+          '6. Tenzing Rock\n\n' +
+          '🛌 Night Stay: Darjeeling (Hotel is 4-5 min walking distance from Mall Road).',
       },
       {
         day: 3,
-        title: 'Maasai Mara Extended Drive',
+        title: 'Darjeeling to NJP drop via Mirik',
         description:
-          'Full day game drive in Maasai Mara with packed lunch. Explore the vast savannah and witness the incredible wildlife. Optional visit to a Maasai village. Return to lodge for dinner.',
+          '🚗 Sightseeing en route:\n' +
+          '1. Lepcha Jagat\n' +
+          '2. Simana View Point\n' +
+          '3. Pashupati Market\n' +
+          '4. India-Nepal Border\n' +
+          '5. Gopaldhara Tea Garden\n' +
+          '6. Mirik Lake\n' +
+          '7. Tingling View Point\n\n' +
+          '📍 Drop off at NJP/Siliguri Jn./Bagdogra.',
+      },
+    ],
+    tripDates: [
+      { date: 'Available Daily', availability: 'Available' },
+    ],
+    hotelDetails: 'Comfortable accommodation 4-5 min walking distance from Mall Road',
+    notes: [
+      'The price of the package may vary depending on your chosen destination.',
+    ],
+    relatedPackages: ['darjeeling-lamahatta-2n-3d', 'sittong-darjeeling-2n-3d'],
+  },
+  {
+    id: 'darjeeling-lamahatta-2n-3d',
+    slug: 'darjeeling-lamahatta-2n-3d',
+    title: '2 Night 3 Days Darjeeling - Lamahatta Tour Regular Package',
+    tagline: 'Pine Forests and Majestic Views',
+    location: 'NJP/Siliguri • Lamahatta • Darjeeling • Mirik',
+    duration: '2N / 3D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80',
+    highlights: ['Lamahatta Eco Park', 'Tiger Hill Sunrise', 'Peshok Tea Garden', 'Mirik Lake'],
+    pickupDrop: 'Pickup from NJP/Siliguri/Bagdogra and Drop to NJP/Siliguri/Bagdogra',
+    inclusions: [
+      'Comfortable Accommodation',
+      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
+      'Transport: Hassle-free transportation. (Personal reservation car)',
+      'Personalized Experiences: Plan your trip to suit your interests and preferences',
+    ],
+    exclusions: [
+      'Outside food and Water',
+      'Entry fees',
+      'Parking charges',
+      'Any other charges that are not mentioned in the package',
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'NJP/Siliguri Jn./Bagdogra to Lamahatta',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Sevok Bridge\n' +
+          '2. Lover\'s Point\n' +
+          '3. Peshok Tea Garden\n' +
+          '4. Lamahatta Eco Park\n\n' +
+          '🛌 Night Stay: Lamahatta.',
+      },
+      {
+        day: 2,
+        title: 'Darjeeling 10 Points Sightseeing',
+        description:
+          '🌅 Early Morning:\n' +
+          '1. Tiger Hill (if possible, depends upon weather)\n' +
+          '2. Ghoom Railway Station\n' +
+          '3. Ghoom Railway Museum\n' +
+          '4. Ghoom Monastery\n' +
+          '5. Batasia Loop\n\n' +
+          '☀️ After Breakfast:\n' +
+          '6. Japanese Temple\n' +
+          '7. Peace Pagoda\n' +
+          '8. Padmaja Naidu Himalayan Zoological Park (Zoo)\n' +
+          '9. Himalayan Mountaineering Institute (HMI)\n' +
+          '10. Tenzing Rock\n\n' +
+          '🛌 Night Stay: Lamahatta.',
+      },
+      {
+        day: 3,
+        title: 'Lamahatta to NJP drop via Mirik',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Lepcha Jagat\n' +
+          '2. Simana View Point\n' +
+          '3. Pashupati Market\n' +
+          '4. India-Nepal Border\n' +
+          '5. Gopaldhara Tea Garden\n' +
+          '6. Mirik Lake\n' +
+          '7. Tingling View Point\n\n' +
+          '📍 Drop off at NJP/Siliguri Jn./Bagdogra.',
+      },
+    ],
+    tripDates: [
+      { date: 'Available Daily', availability: 'Available' },
+    ],
+    hotelDetails: 'Comfortable accommodation in Lamahatta',
+    notes: [
+      'The price of the package may vary depending on your chosen destination.',
+    ],
+    relatedPackages: ['darjeeling-regular-2n-3d', 'darjeeling-offbeat-4n-5d'],
+  },
+  {
+    id: 'sittong-darjeeling-2n-3d',
+    slug: 'sittong-darjeeling-2n-3d',
+    title: '2 Night 3 Days Sittong-Darjeeling Tour Package',
+    tagline: 'Orange Orchards to the Queen of Hills',
+    location: 'NJP • Sittong • Darjeeling • Mirik',
+    duration: '2N / 3D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1600&q=80',
+    highlights: ['Ahaldara 360° View Point', 'Orange Garden', 'Darjeeling Mall Road', 'Mirik Lake'],
+    pickupDrop: 'Pickup from NJP and Drop to NJP',
+    inclusions: [
+      'Comfortable Accommodation',
+      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
+      'Transport: Hassle-free transportation. (Personal reservation car)',
+      'Personalized Experiences: Plan your trip to suit your interests and preferences',
+    ],
+    exclusions: [
+      'Outside food and Water',
+      'Entry fees',
+      'Parking charges',
+      'Any other charges that are not mentioned in the package',
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'NJP to Sittong',
+        description:
+          '🚗 Sightseeing:\n' +
+          '1. Ahaldara 360° View Point\n' +
+          '2. Orange Garden\n' +
+          '3. Namthing Pokhri\n\n' +
+          '🛌 Night Stay: Sittong.',
+      },
+      {
+        day: 2,
+        title: 'Sittong to Darjeeling',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Jogi Ghat\n' +
+          '2. Mongpo\n' +
+          '3. Ghoom Railway Station\n' +
+          '4. Ghoom Museum\n' +
+          '5. Ghoom Monastery\n' +
+          '6. Batasia Loop\n' +
+          '7. Mall Road\n' +
+          '8. Mall Market\n' +
+          '9. Mahakal Mandir\n' +
+          '10. Mahakal Market\n\n' +
+          '🛌 Night Stay: Darjeeling (4-6 min walking distance from Mall road).',
+      },
+      {
+        day: 3,
+        title: 'Darjeeling to NJP via Mirik',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Lepcha Jagat\n' +
+          '2. Simana View Point\n' +
+          '3. India-Nepal Border\n' +
+          '4. Pashupati Market\n' +
+          '5. Gopaldhara Tea Garden\n' +
+          '6. Mirik Lake\n' +
+          '7. Tingling View Point\n\n' +
+          '📍 Drop off at NJP.',
+      },
+    ],
+    tripDates: [
+      { date: 'Available Daily', availability: 'Available' },
+    ],
+    hotelDetails: 'Comfortable accommodation (Darjeeling hotel 4-6 min walking distance from Mall road)',
+    notes: [
+      'The price of the package may vary depending on your chosen destination.',
+    ],
+    relatedPackages: ['darjeeling-regular-2n-3d', 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d'],
+  },
+  {
+    id: 'darjeeling-offbeat-4n-5d',
+    slug: 'darjeeling-offbeat-4n-5d',
+    title: '4 Night 5 Days Darjeeling & Offbeat Tour Package',
+    tagline: 'The Ultimate Himalayan Escape',
+    location: 'NJP • Sittong • Lamahatta • Darjeeling',
+    duration: '4N / 5D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80',
+    highlights: ['Sittong Orange Orchards', 'Lamahatta Pine Forests', 'Tiger Hill Sunrise', 'Mirik Lake'],
+    pickupDrop: 'Pickup from NJP and Drop to NJP',
+    inclusions: [
+      'Comfortable Accommodation',
+      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
+      'Transport: Hassle-free transportation. (Personal reservation car)',
+      'Personalized Experiences: Plan your trip to suit your interests and preferences',
+    ],
+    exclusions: [
+      'Outside food and Water',
+      'Entry fees',
+      'Parking charges',
+      'Any other charges that are not mentioned in the package',
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'NJP to Sittong',
+        description:
+          '🚗 Scenic transfer to Sittong.\n\n' +
+          '🛌 Night Stay: Sittong.',
+      },
+      {
+        day: 2,
+        title: 'Sittong to Lamahatta',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Ahaldara 360° View Point\n' +
+          '2. Namthing Pokhri\n' +
+          '3. Pine Forest\n' +
+          '4. Mongpo\n' +
+          '5. Jogi Ghat\n\n' +
+          '🛌 Night Stay: Lamahatta.',
+      },
+      {
+        day: 3,
+        title: 'Lamahatta to Darjeeling',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Peshok Tea Garden\n' +
+          '2. Tinchuley\n' +
+          '3. Tea Garden\n' +
+          '4. Gumbadara Viewpoint\n' +
+          '5. Lamahatta Eco Park\n\n' +
+          '🛌 Night Stay: Darjeeling.',
       },
       {
         day: 4,
-        title: 'Maasai Mara - Nakuru',
+        title: 'Darjeeling 10 points Sightseeing',
         description:
-          'Morning game drive in Maasai Mara. After breakfast, drive to Lake Nakuru. Check in to your hotel. Evening at leisure to enjoy the beautiful surroundings.',
+          '🌅 Early Morning (3:30 AM to 8:00 AM):\n' +
+          '1. Tiger Hill (if possible, depends upon the weather)\n' +
+          '2. Ghoom Railway Station\n' +
+          '3. Ghoom Monastery\n' +
+          '4. Batasia Loop\n\n' +
+          '☀️ After breakfast:\n' +
+          '5. Japanese Temple\n' +
+          '6. Peace Pagoda\n' +
+          '7. Zoo\n' +
+          '8. HMI\n' +
+          '9. Tenzing Rock\n\n' +
+          '🛌 Night Stay: Darjeeling (4-5 min walking distance from Mall).',
       },
       {
         day: 5,
-        title: 'Nakuru Park – Lake Naivasha',
+        title: 'Darjeeling to NJP via Mirik',
         description:
-          'Morning game drive at Lake Nakuru National Park, famous for flamingos and rhinos. After lunch, proceed to Lake Naivasha. Optional boat ride to see hippos and birds. Overnight at hotel.',
+          '🚗 Sightseeing en route:\n' +
+          '1. Tingling View Point\n' +
+          '2. Mirik Lake\n' +
+          '3. Gopaldhara Tea Garden\n' +
+          '4. Pashupati Market\n' +
+          '5. India-Nepal Border\n' +
+          '6. Simana View Point\n' +
+          '7. Lepcha Jagat\n\n' +
+          '📍 Drop off at NJP.',
+      },
+    ],
+    tripDates: [
+      { date: 'Available Daily', availability: 'Available' },
+    ],
+    hotelDetails: 'Comfortable accommodation (Darjeeling hotel 4-5 min walking distance from Mall)',
+    notes: [
+      'The price of the package may vary depending on your chosen destination.',
+    ],
+    relatedPackages: ['offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d', 'darjeeling-offbeat-5n-6d'],
+  },
+  {
+    id: 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d',
+    slug: 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d',
+    title: '4 Night 5 Days Offbeat Darjeeling Tour Package',
+    tagline: 'Discover the Hidden Gems of North Bengal',
+    location: 'NJP • Sittong • Takdah/Lamahatta • Lepcha Jagat',
+    duration: '4N / 5D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80',
+    highlights: ['Ahaldara 360° View Point', 'Takdah Pine Forest', 'Triveni Lovers Point', 'Lepcha Jagat'],
+    pickupDrop: 'Pickup from NJP and Drop to NJP',
+    inclusions: [
+      'Comfortable Accommodation',
+      'Views from every room',
+      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
+      'Transport: Hassle-free transportation (Personal reservation car)',
+      'Personalized Experiences: Plan your trip to suit your interests and preferences',
+    ],
+    exclusions: [
+      'Outside food and Water',
+      'Entry fees',
+      'Parking charges',
+      'Any other charges that are not mentioned in the package',
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'NJP to Sittong',
+        description:
+          '🚗 Sightseeing:\n' +
+          '1. Orange Garden\n' +
+          '2. Ahaldara 360° View Point\n' +
+          '3. Namthing Pokhri\n\n' +
+          '🛌 Night Stay: Sittong.',
+      },
+      {
+        day: 2,
+        title: 'Sittong to Takdah/Lamahatta',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Jogi Ghat\n' +
+          '2. Pine Forest\n' +
+          '3. Takdah\n' +
+          '4. Tea Garden\n' +
+          '5. Tinchuley\n\n' +
+          '🛌 Night Stay: Takdah/Lamahatta.',
+      },
+      {
+        day: 3,
+        title: 'Lamahatta Sightseeing',
+        description:
+          '🚗 Sightseeing:\n' +
+          '1. Gumbadara Viewpoint\n' +
+          '2. Pine Forest\n' +
+          '3. Lamahatta Eco Park\n' +
+          '4. Triveni View Point (Lovers Point)\n' +
+          '5. Peshok Tea Garden\n\n' +
+          '🛌 Night Stay: Takdah/Lamahatta.',
+      },
+      {
+        day: 4,
+        title: 'Takdah/Lamahatta to Lepcha Jagat',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Ghoom Railway Station\n' +
+          '2. Ghoom Monastery\n' +
+          '3. Batasia Loop\n' +
+          '4. Lepcha Jagat\n\n' +
+          '🛌 Night Stay: Lepcha Jagat.',
+      },
+      {
+        day: 5,
+        title: 'Lepcha Jagat to NJP via Mirik',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Lepcha Jagat\n' +
+          '2. Simana View Point\n' +
+          '3. India-Nepal Border\n' +
+          '4. Pashupati Market\n' +
+          '5. Gopaldhara Tea Garden\n' +
+          '6. Mirik Lake\n' +
+          '7. Tingling View Point\n\n' +
+          '📍 Drop off at NJP.',
+      },
+    ],
+    tripDates: [
+      { date: 'Available Daily', availability: 'Available' },
+    ],
+    hotelDetails: 'Comfortable accommodation with views from every room',
+    notes: [
+      'The price of the package may vary depending on your chosen destination.',
+    ],
+    relatedPackages: ['darjeeling-offbeat-4n-5d', 'darjeeling-offbeat-5n-6d'],
+  },
+  {
+    id: 'darjeeling-offbeat-5n-6d',
+    slug: 'darjeeling-offbeat-5n-6d',
+    title: '5 Night 6 Days Darjeeling & Offbeat Tour Package',
+    tagline: 'The Grand Tour of Queen of Hills & Surroundings',
+    location: 'NJP/Siliguri • Darjeeling • Bijanbari • Lamahatta • Sittong',
+    duration: '5N / 6D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1600&q=80',
+    highlights: ['Bijanbari Valley', 'Lamahatta Eco Park', 'Sittong Orange Gardens', 'Tiger Hill'],
+    pickupDrop: 'Pickup from NJP/Siliguri and Drop to NJP/Siliguri/Bagdogra',
+    inclusions: [
+      'Comfortable Accommodation',
+      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner) (First day lunch to last day breakfast)',
+      'Transport: Hassle-free transportation. (Personal reservation car)',
+      'Personalized Experiences: Plan your trip to suit your interests and preferences',
+    ],
+    exclusions: [
+      'Outside food and Water',
+      'Entry fees',
+      'Parking charges',
+      'Any other charges that are not mentioned in the package',
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'NJP/Siliguri to Darjeeling via Mirik',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Tingling Viewpoint\n' +
+          '2. Mirik Lake\n' +
+          '3. Gopaldhara Tea Estate\n' +
+          '4. Pashupati Market\n' +
+          '5. India-Nepal Border\n' +
+          '6. Simana Viewpoint\n' +
+          '7. Lepcha Jagat\n\n' +
+          '🛌 Night Stay: Darjeeling (3-5 min walking distance from Mall).',
+      },
+      {
+        day: 2,
+        title: 'Darjeeling Local Sightseeing',
+        description:
+          '🌅 Early Morning (3:30 AM to 8:30 AM):\n' +
+          '1. Tiger Hill (if possible, depends on weather)\n' +
+          '2. Ghoom Railway Station\n' +
+          '3. Ghoom Museum\n' +
+          '4. Ghoom Monastery\n' +
+          '5. Batasia Loop\n\n' +
+          '☀️ After Breakfast:\n' +
+          '6. Japanese Temple\n' +
+          '7. Peace Pagoda\n' +
+          '8. Padmaja Naidu Himalayan Zoological Park (Zoo)\n' +
+          '9. Tenzing Rock\n' +
+          '10. Himalayan Mountaineering Institute (HMI)\n' +
+          '11. Rope Way\n\n' +
+          '🌙 Evening:\n' +
+          '12. Mahakal Mandir\n' +
+          '13. Mahakal Market\n' +
+          '14. Mall Road\n\n' +
+          '🛌 Night Stay: Darjeeling.',
+      },
+      {
+        day: 3,
+        title: 'Darjeeling to Bijanbari',
+        description:
+          '🚗 Sightseeing en route during the journey.\n\n' +
+          '🛌 Night Stay: Bijanbari.',
+      },
+      {
+        day: 4,
+        title: 'Bijanbari to Lamahatta',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Lamahatta Eco Park\n' +
+          '2. Gumbadara View Point\n' +
+          '3. Peshok Tea Estates\n' +
+          '4. Takdah\n' +
+          '5. Tinchuley\n\n' +
+          '🛌 Night Stay: Lamahatta.',
+      },
+      {
+        day: 5,
+        title: 'Lamahatta to Sittong',
+        description:
+          '🚗 Sightseeing en route:\n' +
+          '1. Pine Forest\n' +
+          '2. Mongpo\n' +
+          '3. Jogi Ghat\n\n' +
+          '🛌 Night Stay: Sittong.',
       },
       {
         day: 6,
-        title: 'Lake Naivasha – Amboseli',
+        title: 'Sittong to NJP/Siliguri/Bagdogra',
         description:
-          'After breakfast, drive to Amboseli National Park with stunning views of Mount Kilimanjaro. Arrive and check in. Afternoon game drive. Dinner and overnight at lodge.',
-      },
-      {
-        day: 7,
-        title: 'Amboseli Extensive',
-        description:
-          'Full day exploring Amboseli with morning and afternoon game drives. Witness large herds of elephants against the backdrop of Kilimanjaro. Packed lunch during the day. Return to lodge.',
-      },
-      {
-        day: 8,
-        title: 'Amboseli – Nairobi',
-        description:
-          'Early morning game drive for last wildlife sightings. After breakfast, drive back to Nairobi. Check in to hotel. Evening at leisure for shopping or relaxation.',
-      },
-      {
-        day: 9,
-        title: 'Return Back to India',
-        description:
-          'After breakfast, transfer to the airport for your flight back to Kolkata. Depart with wonderful memories of your Kenyan safari adventure.',
+          '🚗 Sightseeing en route:\n' +
+          '1. Namthing Pokhri\n' +
+          '2. Ahaldara 360° View Point\n' +
+          '3. Orange Garden\n\n' +
+          '📍 Drop off at NJP/Siliguri Jn./Bagdogra Airport.',
       },
     ],
     tripDates: [
-      { date: 'Feb 15-23, 2026', availability: 'Limited slots' },
-      { date: 'Mar 10-18, 2026', availability: 'Available' },
-      { date: 'Apr 5-13, 2026', availability: 'Available' },
+      { date: 'Available Daily', availability: 'Available' },
     ],
-    hotelDetails: 'Premium 3-4 star hotels and safari lodges with modern amenities',
+    hotelDetails: 'Comfortable accommodation',
     notes: [
-      'Passport must be valid for at least 6 months from travel date',
-      'Yellow fever vaccination certificate required',
-      'Travel insurance included up to 70 years of age',
-      'Prices subject to change based on availability',
+      'The price of the package may vary depending on your chosen destination.',
     ],
-    relatedPackages: ['goa-sun-sand', 'rajasthan-royal-trails'],
-  },
-  {
-    id: 'kerala-backwaters-bliss',
-    slug: 'kerala-backwaters-bliss',
-    title: 'Kerala Backwaters Bliss',
-    tagline: 'Discover God\'s Own Country',
-    location: 'Kochi • Munnar • Alleppey',
-    duration: '5D / 4N',
-    priceFrom: 18999,
-    priceOriginal: 24999,
-    image:
-      'https://images.unsplash.com/photo-1600431521340-491eca880813?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Houseboat stay', 'Tea estate tour', 'Local cuisine experiences'],
-    pickupDrop: 'Pickup and drop from Kochi Airport/Railway Station',
-    inclusions: ['Hotel stays', 'Daily breakfast', 'All transfers', 'Sightseeing (as per itinerary)'],
-    exclusions: ['Air/Train tickets', 'Personal expenses', 'Entry tickets (if any)'],
-    itinerary: [
-      {
-        day: 1,
-        title: 'Arrival in Kochi & sunset promenade',
-        description:
-          'Arrive in Kochi, check-in, then head to Fort Kochi for a relaxed evening walk and local cafes.',
-      },
-      {
-        day: 2,
-        title: 'Drive to Munnar • tea estate viewpoints',
-        description:
-          'Scenic transfer to Munnar. Explore tea plantations, photo stops, and misty viewpoints.',
-      },
-      {
-        day: 3,
-        title: 'Munnar sightseeing • waterfalls & parks',
-        description:
-          'Visit popular attractions, enjoy the cool climate, and return for a calm evening at your stay.',
-      },
-      {
-        day: 4,
-        title: 'Alleppey houseboat • backwater cruise',
-        description:
-          'Check in to a premium houseboat and cruise serene backwaters with lunch and sunset views.',
-      },
-      {
-        day: 5,
-        title: 'Departure • transfer to Kochi',
-        description:
-          'After breakfast, transfer back to Kochi for your onward journey with memories to keep.',
-      },
-    ],
-    tripDates: [
-      { date: 'Every Weekend', availability: 'Available' },
-    ],
-    hotelDetails: '3-star hotels and premium houseboat',
-    notes: [
-      'Best time to visit: October to March',
-      'Carry light woolens for Munnar',
-    ],
-    relatedPackages: ['goa-sun-sand', 'rajasthan-royal-trails'],
-  },
-  {
-    id: 'goa-sun-sand',
-    slug: 'goa-sun-sand',
-    title: 'Goa Sun & Sand Escape',
-    tagline: 'Beach Vibes & Coastal Dreams',
-    location: 'North Goa • South Goa',
-    duration: '4D / 3N',
-    priceFrom: 14999,
-    priceOriginal: 19999,
-    image:
-      'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Beach hopping', 'Sunset cruise', 'Local markets'],
-    pickupDrop: 'Airport pickup & drop included',
-    inclusions: ['Hotel stays', 'Daily breakfast', 'Airport pickup & drop', 'Sightseeing (as per itinerary)'],
-    exclusions: ['Flights', 'Personal expenses', 'Water sports (optional)'],
-    itinerary: [
-      { day: 1, title: 'Arrival & leisure', description: 'Check-in and relax by the beach at your own pace.' },
-      {
-        day: 2,
-        title: 'North Goa tour',
-        description: 'Explore iconic beaches, forts, and evening markets with optional water sports.',
-      },
-      {
-        day: 3,
-        title: 'South Goa • sunset cruise',
-        description: 'Visit heritage churches and enjoy a premium sunset cruise experience.',
-      },
-      { day: 4, title: 'Departure', description: 'Breakfast, checkout, and transfer for your onward journey.' },
-    ],
-    tripDates: [
-      { date: 'Every Friday', availability: 'Available' },
-    ],
-    hotelDetails: 'Beach-facing 3-star resort',
-    notes: [
-      'Best time: November to February',
-      'Water sports charges extra',
-    ],
-    relatedPackages: ['kerala-backwaters-bliss', 'rajasthan-royal-trails'],
-  },
-  {
-    id: 'rajasthan-royal-trails',
-    slug: 'rajasthan-royal-trails',
-    title: 'Rajasthan Royal Trails',
-    tagline: 'Experience Royal Heritage',
-    location: 'Jaipur • Jodhpur • Jaisalmer',
-    duration: '6D / 5N',
-    priceFrom: 26999,
-    priceOriginal: 34999,
-    image:
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Heritage forts', 'Desert safari', 'Cultural evenings'],
-    pickupDrop: 'Pickup and drop from Jaipur',
-    inclusions: ['Hotel stays', 'Daily breakfast', 'All transfers', 'Sightseeing (as per itinerary)'],
-    exclusions: ['Flights/Trains', 'Personal expenses', 'Monument fees (if any)'],
-    itinerary: [
-      { day: 1, title: 'Jaipur arrival • city lights', description: 'Arrive and enjoy a relaxed evening in Jaipur.' },
-      { day: 2, title: 'Amber Fort • Pink City', description: 'Explore iconic forts and bazaars.' },
-      { day: 3, title: 'Jodhpur transfer', description: 'Drive to Jodhpur and explore local markets.' },
-      { day: 4, title: 'Jaisalmer • desert dunes', description: 'Reach Jaisalmer and head for dune experiences.' },
-      { day: 5, title: 'Safari • cultural evening', description: 'Desert safari with music and a premium dinner.' },
-      { day: 6, title: 'Departure', description: 'Checkout and continue your onward journey.' },
-    ],
-    tripDates: [
-      { date: 'Feb 20-25, 2026', availability: 'Available' },
-      { date: 'Mar 15-20, 2026', availability: 'Available' },
-    ],
-    hotelDetails: 'Heritage hotels and desert camps',
-    notes: [
-      'Best time: October to March',
-      'Carry sunscreen and comfortable shoes',
-    ],
-    relatedPackages: ['kerala-backwaters-bliss', 'goa-sun-sand'],
+    relatedPackages: ['darjeeling-offbeat-4n-5d', 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d'],
   },
 ]
 
@@ -235,4 +542,3 @@ export function getPackageBySlug(slug) {
 export function getRelatedPackages(slugs) {
   return tourPackages.filter((p) => slugs.includes(p.slug))
 }
-

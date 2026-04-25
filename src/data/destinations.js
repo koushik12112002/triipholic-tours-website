@@ -1,39 +1,30 @@
 export const destinations = [
   {
-    id: 'goa',
-    name: 'Goa',
-    subtitle: 'Beaches • Nightlife • Portuguese charm',
-    image:
-      'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80',
-    blurb:
-      'Sunlit shores, seaside cafes, and a vibrant nightlife—perfect for weekend breaks or laid-back holidays.',
+    id: 'darjeeling',
+    name: 'Darjeeling',
+    subtitle: 'Queen of the Hills • Tea Gardens • Kanchenjunga',
+    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80',
+    blurb: 'Experience the majestic views of the Himalayas, world-famous tea gardens, and the charming colonial heritage.',
   },
   {
-    id: 'kerala',
-    name: 'Kerala',
-    subtitle: 'Backwaters • Ayurveda • Tea estates',
-    image:
-      'https://images.unsplash.com/photo-1600431521340-491eca880813?auto=format&fit=crop&w=1600&q=80',
-    blurb:
-      'Cruise through serene backwaters, explore hill stations, and unwind with authentic wellness experiences.',
+    id: 'sittong',
+    name: 'Sittong',
+    subtitle: 'Orange Village • Ahaldara • Quiet Retreat',
+    image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1600&q=80',
+    blurb: 'A pristine offbeat destination known for its orange orchards, tranquil atmosphere, and stunning 360-degree viewpoints.',
   },
   {
-    id: 'rajasthan',
-    name: 'Rajasthan',
-    subtitle: 'Forts • Palaces • Desert sunsets',
-    image:
-      'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80',
-    blurb:
-      'A royal escape with golden dunes, heritage stays, and iconic architecture across desert cities.',
+    id: 'lamahatta',
+    name: 'Lamahatta',
+    subtitle: 'Pine Forests • Eco Park • Serenity',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80',
+    blurb: 'A peaceful eco-tourism village surrounded by pine forests with beautiful views of Mount Kanchenjunga.',
   },
   {
-    id: 'himachal',
-    name: 'Himachal',
-    subtitle: 'Mountains • Snow • Scenic trails',
-    image:
-      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80',
-    blurb:
-      'Crisp air, pine forests, and soulful views—ideal for honeymooners, families, and adventure lovers.',
+    id: 'mirik',
+    name: 'Mirik',
+    subtitle: 'Mirik Lake • Tea Estates • Nepal Border',
+    image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1600&q=80',
+    blurb: 'A picturesque hill station famous for its beautiful lake, surrounded by forested hills and sprawling tea gardens.',
   },
-]
-
+];

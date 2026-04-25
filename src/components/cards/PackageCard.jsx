@@ -23,7 +23,9 @@ export default function PackageCard({ pkg }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-wine-secondary/90 via-wine-secondary/20 to-transparent" />
         <div className="absolute bottom-4 left-4 right-4">
-          <p className="text-xs font-semibold tracking-[0.2em] text-wine-muted">FROM ₹{pkg.priceFrom.toLocaleString()}</p>
+          <p className="text-xs font-semibold tracking-[0.2em] text-wine-muted">
+            {pkg.priceFrom ? `FROM ₹${pkg.priceFrom.toLocaleString()}` : 'PRICE ON REQUEST'}
+          </p>
           <p className="mt-1 text-lg font-semibold tracking-tight">{pkg.title}</p>
           <p className="mt-1 text-sm text-wine-muted">{pkg.location}</p>
         </div>

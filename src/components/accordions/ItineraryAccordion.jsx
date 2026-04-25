@@ -50,7 +50,7 @@ export default function ItineraryAccordion({ items }) {
                   transition={{ duration: 0.25 }}
                   className="px-4 pb-4 sm:px-5"
                 >
-                  <p className="text-sm leading-6 text-wine-muted">{it.description}</p>
+                  <p className="whitespace-pre-line text-sm leading-6 text-wine-muted">{it.description}</p>
                 </motion.div>
               ) : null}
             </AnimatePresence>
