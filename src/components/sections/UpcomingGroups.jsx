@@ -136,7 +136,7 @@ export default function UpcomingGroups({ packages }) {
                     }}
                     className={`relative flex-none transition-shadow duration-500 ${idx === 0 || idx === 4 ? 'hidden lg:block w-[200px]' :
                       idx === 1 || idx === 3 ? 'hidden sm:block w-[300px] lg:w-[280px]' :
-                        'w-[90vw] sm:w-[420px] lg:w-[380px]'
+                        'w-[75vw] sm:w-[420px] lg:w-[380px]'
                       }`}
                   >
                   <div className={`transition-all duration-500 ${idx === 2 ? 'shadow-2xl ring-2 ring-wine-accent/30 rounded-2xl' : ''}`}>
