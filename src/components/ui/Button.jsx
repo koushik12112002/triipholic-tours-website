@@ -18,6 +18,10 @@ export default function Button({
       'bg-white/10 text-wine-light shadow-soft hover:bg-white/15 active:bg-white/10',
     ghost:
       'bg-transparent text-wine-light hover:bg-white/10 active:bg-white/5',
+    glass:
+      'bg-white/10 backdrop-blur-md text-white border border-white/20 shadow-xl bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%] hover:bg-white/20 transition-all duration-500',
+    wine:
+      'bg-gradient-to-br from-wine-accent via-wine-primary to-wine-accent bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%] text-white border border-white/10 shadow-glow active:scale-[0.98] transition-all duration-500',
   }
 
   const sizes = {
@@ -26,7 +30,7 @@ export default function Button({
     lg: 'h-12 px-5 text-base',
   }
 
-  const MotionComp = motion(Comp)
+  const MotionComp = motion.create(Comp)
 
   return (
     <MotionComp

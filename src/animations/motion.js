@@ -2,14 +2,14 @@ import { easeOut } from 'framer-motion'
 
 // Base fade-up variant
 export const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 15 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: 'easeOut',
-      delay: i ? 0.12 * i : 0,
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+      delay: i ? 0.1 * i : 0,
     },
   }),
 }
@@ -20,7 +20,7 @@ export const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.14,
+      staggerChildren: 0.1,
     },
   },
 }
@@ -29,18 +29,18 @@ export const staggerContainer = {
 export const inViewProps = {
   initial: 'hidden',
   whileInView: 'visible',
-  viewport: { once: true, amount: 0.25 },
+  viewport: { once: true, amount: 0.1 },
 }
 
 // Subtle parallax for images (y-only movement)
 export const parallaxImage = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: 'easeOut',
+      duration: 1,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
 }

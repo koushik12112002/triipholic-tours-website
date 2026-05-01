@@ -30,95 +30,26 @@ export default function LogoOrbit() {
     ]
 
     return (
-        <div className="relative flex items-center justify-center h-[400px] w-[500px] [perspective:1200px]">
-            {/* Central Logo Container */}
+        <div className="relative flex items-center justify-center py-20">
+            {/* Elegant Logo Container */}
             <motion.div
-                className="relative z-10 h-28 w-28 flex items-center justify-center rounded-full border-2 border-white/20 bg-wine-secondary/90 p-3 shadow-glow backdrop-blur-md cursor-pointer"
+                className="relative z-10 h-40 w-40 flex items-center justify-center rounded-full border border-white/20 bg-wine-secondary/50 p-6 shadow-[0_0_50px_rgba(255,255,255,0.1)] backdrop-blur-xl"
                 whileHover={{
-                    scale: 1.15,
-                    boxShadow: "0 0 35px rgba(255, 255, 255, 0.25)",
-                    borderColor: "rgba(255, 255, 255, 0.5)"
+                    scale: 1.05,
+                    boxShadow: "0 0 60px rgba(255, 255, 255, 0.2)",
+                    borderColor: "rgba(255, 255, 255, 0.4)"
                 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
             >
                 <img
                     src="/logo.png"
                     alt="Logo"
-                    className="h-full w-full object-contain brightness-110 drop-shadow-lg"
+                    className="h-full w-full object-contain brightness-110 drop-shadow-2xl"
                 />
             </motion.div>
 
-            {/* 3D Orbit Container */}
-            <div
-                className="absolute inset-0 [transform-style:preserve-3d]"
-                style={{ transform: 'rotateX(65deg)' }}
-            >
-                {/* Transparent Orbit Path Visual */}
-                <div className="absolute inset-0 rounded-full" />
-
-                {/* Rotating Icons Wrapper */}
-                <motion.div
-                    className="h-full w-full relative [transform-style:preserve-3d]"
-                    animate={{ rotateZ: 360 }}
-                    transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-                >
-                    {icons.map((item, idx) => {
-                        const angle = (idx * 360) / icons.length
-                        return (
-                            <div
-                                key={item.name}
-                                className="absolute left-1/2 top-1/2 [transform-style:preserve-3d]"
-                                style={{
-                                    transform: `rotateZ(${angle}deg) translateX(180px) rotateZ(${-angle}deg)`,
-                                }}
-                            >
-                                {/* Individual Icon Box with 90deg tilt compensation */}
-                                <motion.div
-                                    className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/30 backdrop-blur-md relative shadow-2xl overflow-hidden"
-                                    style={{
-                                        backgroundColor: item.color,
-                                        transformStyle: 'preserve-3d',
-                                        transform: 'rotateX(-65deg)', // Tilt icon back up to face user
-                                        boxShadow: `
-                          inset 0 2px 4px rgba(255,255,255,0.4),
-                          inset 0 -2px 4px rgba(0,0,0,0.4),
-                          0 15px 35px rgba(0,0,0,0.6)
-                      `
-                                    }}
-                                    animate={{ rotateY: [0, 10, -10, 0] }} // Subtle wobble for 3D feel
-                                    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                                    whileHover={{
-                                        scale: 1.25,
-                                        y: -15,
-                                        boxShadow: `0 0 30px ${item.color}, 0 0 60px ${item.color}44`,
-                                        transition: { duration: 0.2, ease: "easeOut" }
-                                    }}
-                                >
-                                    {/* 3D Reflection Effect */}
-                                    <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/30 to-transparent" />
-
-                                    <svg
-                                        viewBox="0 0 24 24"
-                                        fill="white"
-                                        className="w-7 h-7 relative z-10 drop-shadow-md"
-                                    >
-                                        {item.svg}
-                                    </svg>
-                                </motion.div>
-
-                                {/* Optional: Shadow on the "ground" of the orbit */}
-                                <div
-                                    className="absolute -bottom-10 left-1/2 -translate-x-1/2 h-2 w-10 bg-black/40 blur-md rounded-full"
-                                    style={{ transform: 'scaleX(1.5)' }}
-                                />
-                            </div>
-                        )
-                    })}
-                </motion.div>
-            </div>
-
-            {/* Outer Glows */}
-            <div className="absolute inset-x-0 inset-y-12 -z-10 rounded-full bg-gradient-to-tr from-wine-accent/20 to-transparent blur-[100px] opacity-40" />
+            {/* Subtle Background Atmosphere */}
+            <div className="absolute inset-x-0 inset-y-12 -z-10 rounded-full bg-gradient-to-tr from-wine-accent/10 to-transparent blur-[100px] opacity-30" />
         </div>
     )
 }

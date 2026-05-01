@@ -19,7 +19,7 @@ function List({ title, items }) {
       <ul className="space-y-2 text-sm text-wine-muted">
         {items.map((x) => (
           <li key={x} className="flex gap-2">
-            <span className="mt-[0.35rem] h-1.5 w-1.5 shrink-0 rounded-full bg-wine-accent" />
+            <span className="mt-[0.35rem] h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
             <span className="leading-6">{x}</span>
           </li>
         ))}
@@ -98,7 +98,7 @@ export default function PackageDetails() {
               <ul className="space-y-2">
                 {pkg.notes.map((note, idx) => (
                   <li key={idx} className="flex gap-2 text-sm text-wine-muted">
-                    <span className="mt-[0.35rem] h-1.5 w-1.5 shrink-0 rounded-full bg-wine-accent" />
+                    <span className="mt-[0.35rem] h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
                     <span className="leading-6">{note}</span>
                   </li>
                 ))}

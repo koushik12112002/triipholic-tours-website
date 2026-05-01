@@ -11,13 +11,13 @@ import { cn } from '../../utils/cn.js'
 function validate(values) {
   const errors = {}
   if (!values.name.trim()) errors.name = 'Full name is required.'
-  if (!values.email.trim()) errors.email = 'Email is required.'
-  if (!/^\S+@\S+\.\S+$/.test(values.email)) errors.email = 'Enter a valid email.'
   if (!values.phone.trim()) errors.phone = 'Phone number is required.'
-  if (values.phone && values.phone.replace(/\D/g, '').length < 8) errors.phone = 'Enter a valid phone number.'
+  if (!values.journeyDate) errors.journeyDate = 'Journey date is required.'
+  if (!values.returnDate) errors.returnDate = 'Return date is required.'
   if (!values.destination.trim()) errors.destination = 'Destination is required.'
-  if (!values.adults || values.adults < 1) errors.adults = 'Number of adults is required (min 1).'
-  if (!values.message.trim()) errors.message = 'Please add a short message.'
+  if (!values.adults || values.adults < 1) errors.adults = 'Min 1 adult required.'
+  if (!values.carCount || values.carCount < 1) errors.carCount = 'Min 1 car required.'
+  if (!values.roomCount || values.roomCount < 1) errors.roomCount = 'Min 1 room required.'
   return errors
 }
 
@@ -27,7 +27,7 @@ function validate(values) {
 function Field({ label, error, children }) {
   return (
     <div className="space-y-1.5">
-      <p className="text-xs font-semibold tracking-[0.18em] text-wine-muted">{label}</p>
+      <p className="text-[10px] font-bold tracking-[0.2em] text-wine-muted uppercase">{label}</p>
       {children}
       <AnimatePresence>
         {error && (
@@ -35,7 +35,7 @@ function Field({ label, error, children }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="text-xs text-red-200 mt-1"
+            className="text-[10px] text-red-400 mt-1 font-medium"
           >
             {error}
           </motion.p>
@@ -49,11 +49,15 @@ export default function EnquiryForm({ className }) {
   const location = useLocation()
   const [values, setValues] = useState({
     name: '',
-    email: '',
     phone: '',
+    journeyDate: '',
+    returnDate: '',
     destination: '',
     adults: 1,
-    message: '',
+    children: 0,
+    carCount: 1,
+    carType: '4 Seater',
+    roomCount: 1,
   })
   const [status, setStatus] = useState({ state: 'idle', message: '' })
   const [loading, setLoading] = useState(false)
@@ -66,13 +70,12 @@ export default function EnquiryForm({ className }) {
 
     const currentErrors = validate(values)
     if (Object.keys(currentErrors).length > 0) {
-      setStatus({ state: 'error', message: 'Please fix the highlighted fields.' })
+      setStatus({ state: 'error', message: 'Please complete all required fields.' })
       return
     }
 
     setLoading(true)
     try {
-      // Build payload matching Google Apps Script expectations
       const payload = {
         ...values,
         page: window.location.origin + location.pathname,
@@ -89,140 +92,169 @@ export default function EnquiryForm({ className }) {
       // Reset form
       setValues({
         name: '',
-        email: '',
         phone: '',
+        journeyDate: '',
+        returnDate: '',
         destination: '',
         adults: 1,
-        message: '',
+        children: 0,
+        carCount: 1,
+        carType: '4 Seater',
+        roomCount: 1,
       })
     } catch (err) {
       console.error('Submission failed:', err)
       setStatus({
         state: 'error',
-        message: 'Fail to submit enquiry. Please check your connection and try again.'
+        message: 'Submission failed. Please try again or contact us via WhatsApp.'
       })
     } finally {
       setLoading(false)
     }
   }
 
+  const inputClasses = (error) => cn(
+    "h-11 w-full rounded-xl border bg-white/5 px-4 text-sm text-wine-light outline-none transition placeholder:text-wine-muted/30",
+    error ? "border-red-500/50" : "border-white/10 focus:border-wine-accent"
+  )
+
   return (
-    <div className={cn('rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft backdrop-blur-md', className)}>
-      <div className="mb-6">
-        <h2 className="text-2xl font-semibold text-wine-light">Enquiry details</h2>
-        <p className="mt-2 text-sm leading-6 text-wine-muted">
-          Fill out the form below and our travel experts will get back to you with a custom plan.
+    <div className={cn('rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-soft backdrop-blur-xl', className)}>
+      <div className="mb-8">
+        <h2 className="text-2xl font-serif text-white">Plan Your Journey</h2>
+        <p className="mt-2 text-sm text-wine-muted font-light">
+          Provide your travel details below and we'll craft the perfect itinerary for you.
         </p>
       </div>
 
-      <form onSubmit={onSubmit} className="space-y-5">
-        <div className="grid gap-5 sm:grid-cols-2">
-          <Field label="FULL NAME" error={status.state === 'error' && errors.name}>
+      <form onSubmit={onSubmit} className="space-y-6">
+        {/* Name and Phone */}
+        <div className="grid gap-6 sm:grid-cols-2">
+          <Field label="Name" error={status.state === 'error' && errors.name}>
             <input
               type="text"
-              name="name"
               value={values.name}
               onChange={(e) => setValues(v => ({ ...v, name: e.target.value }))}
-              placeholder="Your name"
-              className={cn(
-                "h-12 w-full rounded-xl border bg-white/10 px-4 text-sm text-wine-light outline-none transition placeholder:text-wine-muted/50",
-                errors.name && status.state === 'error' ? "border-red-400" : "border-white/10 focus:border-wine-accent"
-              )}
+              placeholder="Full Name"
+              className={inputClasses(errors.name && status.state === 'error')}
             />
           </Field>
-
-          <Field label="EMAIL ADDRESS" error={status.state === 'error' && errors.email}>
+          <Field label="Phone Number" error={status.state === 'error' && errors.phone}>
             <input
-              type="email"
-              name="email"
-              value={values.email}
-              onChange={(e) => setValues(v => ({ ...v, email: e.target.value }))}
-              placeholder="you@example.com"
-              className={cn(
-                "h-12 w-full rounded-xl border bg-white/10 px-4 text-sm text-wine-light outline-none transition placeholder:text-wine-muted/50",
-                errors.email && status.state === 'error' ? "border-red-400" : "border-white/10 focus:border-wine-accent"
-              )}
+              type="tel"
+              value={values.phone}
+              onChange={(e) => setValues(v => ({ ...v, phone: e.target.value }))}
+              placeholder="+91"
+              className={inputClasses(errors.phone && status.state === 'error')}
             />
           </Field>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2">
-          <Field label="PHONE NUMBER" error={status.state === 'error' && errors.phone}>
+        {/* Dates */}
+        <div className="grid gap-6 sm:grid-cols-2">
+          <Field label="Date of Journey" error={status.state === 'error' && errors.journeyDate}>
             <input
-              type="tel"
-              name="phone"
-              value={values.phone}
-              onChange={(e) => setValues(v => ({ ...v, phone: e.target.value }))}
-              placeholder="+91 00000 00000"
-              className={cn(
-                "h-12 w-full rounded-xl border bg-white/10 px-4 text-sm text-wine-light outline-none transition placeholder:text-wine-muted/50",
-                errors.phone && status.state === 'error' ? "border-red-400" : "border-white/10 focus:border-wine-accent"
-              )}
+              type="date"
+              value={values.journeyDate}
+              onChange={(e) => setValues(v => ({ ...v, journeyDate: e.target.value }))}
+              className={cn(inputClasses(errors.journeyDate && status.state === 'error'), "color-scheme-dark")}
             />
           </Field>
+          <Field label="Return Date" error={status.state === 'error' && errors.returnDate}>
+            <input
+              type="date"
+              value={values.returnDate}
+              onChange={(e) => setValues(v => ({ ...v, returnDate: e.target.value }))}
+              className={cn(inputClasses(errors.returnDate && status.state === 'error'), "color-scheme-dark")}
+            />
+          </Field>
+        </div>
 
-          <Field label="NUMBER OF ADULTS" error={status.state === 'error' && errors.adults}>
+        {/* Destination */}
+        <Field label="Destinations" error={status.state === 'error' && errors.destination}>
+          <input
+            type="text"
+            value={values.destination}
+            onChange={(e) => setValues(v => ({ ...v, destination: e.target.value }))}
+            placeholder="e.g. Darjeeling, Gangtok"
+            className={inputClasses(errors.destination && status.state === 'error')}
+          />
+        </Field>
+
+        {/* Counts */}
+        <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-2">
+          <Field label="No. of Adults" error={status.state === 'error' && errors.adults}>
             <input
               type="number"
-              name="adults"
               min="1"
               value={values.adults}
               onChange={(e) => setValues(v => ({ ...v, adults: parseInt(e.target.value) || '' }))}
-              placeholder="1"
-              className={cn(
-                "h-12 w-full rounded-xl border bg-white/10 px-4 text-sm text-wine-light outline-none transition placeholder:text-wine-muted/50",
-                errors.adults && status.state === 'error' ? "border-red-400" : "border-white/10 focus:border-wine-accent"
-              )}
+              className={inputClasses(errors.adults && status.state === 'error')}
+            />
+          </Field>
+          <Field label="Children (4-8 years)">
+            <input
+              type="number"
+              min="0"
+              value={values.children}
+              onChange={(e) => setValues(v => ({ ...v, children: parseInt(e.target.value) || 0 }))}
+              className={inputClasses(false)}
             />
           </Field>
         </div>
 
-        <Field label="DESTINATION" error={status.state === 'error' && errors.destination}>
+        {/* Car Details */}
+        <div className="grid gap-6 sm:grid-cols-2">
+          <Field label="Required no. of car" error={status.state === 'error' && errors.carCount}>
+            <input
+              type="number"
+              min="1"
+              value={values.carCount}
+              onChange={(e) => setValues(v => ({ ...v, carCount: parseInt(e.target.value) || '' }))}
+              className={inputClasses(errors.carCount && status.state === 'error')}
+            />
+          </Field>
+          <Field label="Car type">
+            <select
+              value={values.carType}
+              onChange={(e) => setValues(v => ({ ...v, carType: e.target.value }))}
+              className={cn(inputClasses(false), "appearance-none")}
+            >
+              <option value="4 Seater">4 Seater</option>
+              <option value="8 Seater">8 Seater</option>
+            </select>
+          </Field>
+        </div>
+
+        {/* Rooms */}
+        <Field label="Require no. of rooms" error={status.state === 'error' && errors.roomCount}>
           <input
-            type="text"
-            name="destination"
-            value={values.destination}
-            onChange={(e) => setValues(v => ({ ...v, destination: e.target.value }))}
-            placeholder="Where do you want to go?"
-            className={cn(
-              "h-12 w-full rounded-xl border bg-white/10 px-4 text-sm text-wine-light outline-none transition placeholder:text-wine-muted/50",
-              errors.destination && status.state === 'error' ? "border-red-400" : "border-white/10 focus:border-wine-accent"
-            )}
+            type="number"
+            min="1"
+            value={values.roomCount}
+            onChange={(e) => setValues(v => ({ ...v, roomCount: parseInt(e.target.value) || '' }))}
+            className={inputClasses(errors.roomCount && status.state === 'error')}
           />
         </Field>
 
-        <Field label="YOUR MESSAGE" error={status.state === 'error' && errors.message}>
-          <textarea
-            name="message"
-            value={values.message}
-            onChange={(e) => setValues(v => ({ ...v, message: e.target.value }))}
-            placeholder="Tell us about your trip (dates, number of people, etc.)"
-            rows={4}
-            className={cn(
-              "w-full resize-none rounded-2xl border bg-white/10 p-4 text-sm text-wine-light outline-none transition placeholder:text-wine-muted/50",
-              errors.message && status.state === 'error' ? "border-red-400" : "border-white/10 focus:border-wine-accent"
-            )}
-          />
-        </Field>
-
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pt-2">
+        <div className="flex flex-col gap-4 pt-4">
           <Button
             type="submit"
             size="lg"
             disabled={loading}
-            className="w-full sm:w-auto"
+            className="w-full"
           >
-            {loading ? 'Sending enquiry...' : 'Submit Enquiry'}
+            {loading ? 'Sending Request...' : 'Submit Enquiry'}
           </Button>
 
           <AnimatePresence>
             {status.state !== 'idle' && (
               <motion.p
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
                 className={cn(
-                  "text-sm font-medium",
+                  "text-sm text-center font-medium",
                   status.state === 'success' ? "text-emerald-400" : "text-red-400"
                 )}
               >

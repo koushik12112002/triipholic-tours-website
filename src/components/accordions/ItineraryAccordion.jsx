@@ -50,7 +50,30 @@ export default function ItineraryAccordion({ items }) {
                   transition={{ duration: 0.25 }}
                   className="px-4 pb-4 sm:px-5"
                 >
-                  <p className="whitespace-pre-line text-sm leading-6 text-wine-muted">{it.description}</p>
+                  <div className="space-y-3">
+                    {(() => {
+                      // Split by full stop first, then by newline. 
+                      // Only split by comma if there are no full stops to avoid over-splitting sentences.
+                      const parts = it.description.includes('.') 
+                        ? it.description.split('.') 
+                        : it.description.split(',')
+                      
+                      return parts.filter(p => p.trim()).map((point, idx) => (
+                        <motion.div 
+                          key={idx} 
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.1 * idx }}
+                          className="flex gap-3 group"
+                        >
+                          <span className="mt-[0.6rem] h-1.5 w-1.5 shrink-0 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-transform duration-300 group-hover:scale-150" />
+                          <p className="text-sm leading-relaxed text-wine-muted group-hover:text-wine-light transition-colors duration-300">
+                            {point.trim()}{!point.trim().endsWith('.') && '.'}
+                          </p>
+                        </motion.div>
+                      ))
+                    })()}
+                  </div>
                 </motion.div>
               ) : null}
             </AnimatePresence>

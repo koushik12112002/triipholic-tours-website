@@ -1,537 +1,385 @@
+const standardInclusions = [
+  'Comfortable Accommodation',
+  'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
+  'Transport: Hassle-free transportation (Personal reservation car)',
+  'Personalized Experiences: Plan your trip to suit your interests and preferences',
+]
+
+const standardExclusions = [
+  'Outside food and Water',
+  'Entry fees',
+  'Parking charges',
+  'Any other charges that are not mentioned in the package',
+]
+
 export const tourPackages = [
   {
     id: 'darjeeling-regular-2n-3d',
     slug: 'darjeeling-regular-2n-3d',
     title: '2 Night 3 Days Darjeeling Tour Regular Package',
     tagline: 'Experience the Queen of the Hills',
-    location: 'NJP/Siliguri • Darjeeling • Mirik',
+    location: 'NJP/Siliguri - Darjeeling - Mirik',
     duration: '2N / 3D',
     priceFrom: 0,
     priceOriginal: 0,
-    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80',
+    image: '/assets/darjelling2.avif',
     highlights: ['Darjeeling Mall Road', 'Tiger Hill Sunrise', 'Mirik Lake', 'Tea Gardens'],
     pickupDrop: 'Pickup from NJP/Siliguri/Bagdogra and Drop to NJP/Siliguri/Bagdogra',
-    inclusions: [
-      'Comfortable Accommodation',
-      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
-      'Transport: Hassle-free transportation. (Personal reservation car)',
-      'Personalized Experiences: Plan your trip to suit your interests and preferences',
-    ],
-    exclusions: [
-      'Outside food and Water',
-      'Entry fees',
-      'Parking charges',
-      'Any other charges that are not mentioned in the package',
-    ],
+    category: 'Darjeeling',
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
     itinerary: [
       {
         day: 1,
         title: 'NJP/Siliguri Jn./Bagdogra to Darjeeling',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Kurseong\n' +
-          '2. Kurseong Valley View Point\n' +
-          '3. Ghoom Railway Station\n' +
-          '4. Ghoom Railway Museum\n' +
-          '5. Ghoom Monastery\n' +
-          '6. Batasia Loop\n' +
-          '7. Mall Road\n\n' +
-          '🛌 Night Stay: Darjeeling (Hotel is 4-5 min walking distance from Mall Road).',
+        description: 'Kurseong. Kurseong valley view point. Ghoom Railway Station. Ghoom Railway Museum. Ghoom Monastery. Batasia Loop. Mall Road. Nightstay at Darjeeling.',
       },
       {
         day: 2,
         title: 'Darjeeling 10 Points Sightseeing',
-        description:
-          '🌅 Early Morning:\n' +
-          '1. Tiger Hill (if possible, depends upon weather)\n\n' +
-          '☀️ After Breakfast:\n' +
-          '2. Japanese Temple\n' +
-          '3. Peace Pagoda\n' +
-          '4. Padmaja Naidu Himalayan Zoological Park (Zoo)\n' +
-          '5. Himalayan Mountaineering Institute (HMI)\n' +
-          '6. Tenzing Rock\n\n' +
-          '🛌 Night Stay: Darjeeling (Hotel is 4-5 min walking distance from Mall Road).',
+        description: 'Tiger hill (weather permitting). Japanese Temple. Peace Pagoda. Zoo. HMI. Tenzing Rock. Nightstay at Darjeeling.',
       },
       {
         day: 3,
         title: 'Darjeeling to NJP drop via Mirik',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Lepcha Jagat\n' +
-          '2. Simana View Point\n' +
-          '3. Pashupati Market\n' +
-          '4. India-Nepal Border\n' +
-          '5. Gopaldhara Tea Garden\n' +
-          '6. Mirik Lake\n' +
-          '7. Tingling View Point\n\n' +
-          '📍 Drop off at NJP/Siliguri Jn./Bagdogra.',
+        description: 'Lepcha Jagat. Simana View Point. Pashupati Market. India - Nepal Border. Gopaldara Tea Garden. Mirik Lake. Tingling View Point. Drop at NJP/Siliguri Jn./Bagdogra.',
       },
     ],
-    tripDates: [
-      { date: 'Available Daily', availability: 'Available' },
-    ],
-    hotelDetails: 'Comfortable accommodation 4-5 min walking distance from Mall Road',
-    notes: [
-      'The price of the package may vary depending on your chosen destination.',
-    ],
-    relatedPackages: ['darjeeling-lamahatta-2n-3d', 'sittong-darjeeling-2n-3d'],
   },
   {
     id: 'darjeeling-lamahatta-2n-3d',
     slug: 'darjeeling-lamahatta-2n-3d',
     title: '2 Night 3 Days Darjeeling - Lamahatta Tour Regular Package',
     tagline: 'Pine Forests and Majestic Views',
-    location: 'NJP/Siliguri • Lamahatta • Darjeeling • Mirik',
+    location: 'NJP/Siliguri - Lamahatta - Darjeeling',
     duration: '2N / 3D',
     priceFrom: 0,
     priceOriginal: 0,
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Lamahatta Eco Park', 'Tiger Hill Sunrise', 'Peshok Tea Garden', 'Mirik Lake'],
-    pickupDrop: 'Pickup from NJP/Siliguri/Bagdogra and Drop to NJP/Siliguri/Bagdogra',
-    inclusions: [
-      'Comfortable Accommodation',
-      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
-      'Transport: Hassle-free transportation. (Personal reservation car)',
-      'Personalized Experiences: Plan your trip to suit your interests and preferences',
-    ],
-    exclusions: [
-      'Outside food and Water',
-      'Entry fees',
-      'Parking charges',
-      'Any other charges that are not mentioned in the package',
-    ],
+    image: '/assets/darjelling3.jpg',
+    category: 'Darjeeling',
+    highlights: ['Lamahatta Eco Park', 'Tiger Hill Sunrise', 'Peshok Tea Garden'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
     itinerary: [
       {
         day: 1,
-        title: 'NJP/Siliguri Jn./Bagdogra to Lamahatta',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Sevok Bridge\n' +
-          '2. Lover\'s Point\n' +
-          '3. Peshok Tea Garden\n' +
-          '4. Lamahatta Eco Park\n\n' +
-          '🛌 Night Stay: Lamahatta.',
+        title: 'NJP/Siliguri Jn./Bagdogra to Darjeeling',
+        description: 'Sevok Bridge. Lover\'s point. Peshok tea garden. Lamahatta eco park. Nightstay at Lamahatta.',
       },
       {
         day: 2,
         title: 'Darjeeling 10 Points Sightseeing',
-        description:
-          '🌅 Early Morning:\n' +
-          '1. Tiger Hill (if possible, depends upon weather)\n' +
-          '2. Ghoom Railway Station\n' +
-          '3. Ghoom Railway Museum\n' +
-          '4. Ghoom Monastery\n' +
-          '5. Batasia Loop\n\n' +
-          '☀️ After Breakfast:\n' +
-          '6. Japanese Temple\n' +
-          '7. Peace Pagoda\n' +
-          '8. Padmaja Naidu Himalayan Zoological Park (Zoo)\n' +
-          '9. Himalayan Mountaineering Institute (HMI)\n' +
-          '10. Tenzing Rock\n\n' +
-          '🛌 Night Stay: Lamahatta.',
+        description: 'Tiger hill (weather permitting). Japanese Temple. Peace Pagoda. Zoo. HMI. Tenzing Rock. Ghoom Railway Station. Ghoom Railway Museum. Ghoom Monastery. Batasia Loop. Nightstay at Lamahatta.',
       },
       {
         day: 3,
-        title: 'Lamahatta to NJP drop via Mirik',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Lepcha Jagat\n' +
-          '2. Simana View Point\n' +
-          '3. Pashupati Market\n' +
-          '4. India-Nepal Border\n' +
-          '5. Gopaldhara Tea Garden\n' +
-          '6. Mirik Lake\n' +
-          '7. Tingling View Point\n\n' +
-          '📍 Drop off at NJP/Siliguri Jn./Bagdogra.',
+        title: 'Darjeeling to NJP drop via Mirik',
+        description: 'Lepcha Jagat. Simana View Point. Pashupati Market. India - Nepal Border. Gopaldara Tea Garden. Mirik Lake. Tingling View Point. Drop at NJP/Siliguri Jn./Bagdogra.',
       },
     ],
-    tripDates: [
-      { date: 'Available Daily', availability: 'Available' },
-    ],
-    hotelDetails: 'Comfortable accommodation in Lamahatta',
-    notes: [
-      'The price of the package may vary depending on your chosen destination.',
-    ],
-    relatedPackages: ['darjeeling-regular-2n-3d', 'darjeeling-offbeat-4n-5d'],
   },
   {
     id: 'sittong-darjeeling-2n-3d',
     slug: 'sittong-darjeeling-2n-3d',
     title: '2 Night 3 Days Sittong-Darjeeling Tour Package',
     tagline: 'Orange Orchards to the Queen of Hills',
-    location: 'NJP • Sittong • Darjeeling • Mirik',
+    location: 'NJP - Sittong - Darjeeling',
     duration: '2N / 3D',
     priceFrom: 0,
     priceOriginal: 0,
-    image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Ahaldara 360° View Point', 'Orange Garden', 'Darjeeling Mall Road', 'Mirik Lake'],
-    pickupDrop: 'Pickup from NJP and Drop to NJP',
-    inclusions: [
-      'Comfortable Accommodation',
-      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
-      'Transport: Hassle-free transportation. (Personal reservation car)',
-      'Personalized Experiences: Plan your trip to suit your interests and preferences',
-    ],
-    exclusions: [
-      'Outside food and Water',
-      'Entry fees',
-      'Parking charges',
-      'Any other charges that are not mentioned in the package',
-    ],
+    image: '/assets/darjelling4.jpg',
+    category: 'Darjeeling',
+    highlights: ['Ahaldara View Point', 'Orange Garden', 'Darjeeling Mall'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
     itinerary: [
       {
         day: 1,
         title: 'NJP to Sittong',
-        description:
-          '🚗 Sightseeing:\n' +
-          '1. Ahaldara 360° View Point\n' +
-          '2. Orange Garden\n' +
-          '3. Namthing Pokhri\n\n' +
-          '🛌 Night Stay: Sittong.',
+        description: 'Ahaldara 360 degree view point. Orange Garden. Namthing Pokhri. Night Stay at Sittong.',
       },
       {
         day: 2,
         title: 'Sittong to Darjeeling',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Jogi Ghat\n' +
-          '2. Mongpo\n' +
-          '3. Ghoom Railway Station\n' +
-          '4. Ghoom Museum\n' +
-          '5. Ghoom Monastery\n' +
-          '6. Batasia Loop\n' +
-          '7. Mall Road\n' +
-          '8. Mall Market\n' +
-          '9. Mahakal Mandir\n' +
-          '10. Mahakal Market\n\n' +
-          '🛌 Night Stay: Darjeeling (4-6 min walking distance from Mall road).',
+        description: 'Jogi ghat. Mongpo. Ghoom Railway Station. Ghoom Museum. Ghoom Monastery. Batasia Loop. Mall road. Mall Market. Mahakal Mandir. Mahakal Market. Night Stay at Darjeeling.',
       },
       {
         day: 3,
         title: 'Darjeeling to NJP via Mirik',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Lepcha Jagat\n' +
-          '2. Simana View Point\n' +
-          '3. India-Nepal Border\n' +
-          '4. Pashupati Market\n' +
-          '5. Gopaldhara Tea Garden\n' +
-          '6. Mirik Lake\n' +
-          '7. Tingling View Point\n\n' +
-          '📍 Drop off at NJP.',
+        description: 'Lepcha Jagat. Simana View Point. India-Nepal Border. Pashupati Market. Gopaldhara Tea Garden. Mirik Lake. Tingling View point. NJP Drop.',
       },
     ],
-    tripDates: [
-      { date: 'Available Daily', availability: 'Available' },
-    ],
-    hotelDetails: 'Comfortable accommodation (Darjeeling hotel 4-6 min walking distance from Mall road)',
-    notes: [
-      'The price of the package may vary depending on your chosen destination.',
-    ],
-    relatedPackages: ['darjeeling-regular-2n-3d', 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d'],
   },
   {
     id: 'darjeeling-offbeat-4n-5d',
     slug: 'darjeeling-offbeat-4n-5d',
     title: '4 Night 5 Days Darjeeling & Offbeat Tour Package',
     tagline: 'The Ultimate Himalayan Escape',
-    location: 'NJP • Sittong • Lamahatta • Darjeeling',
+    location: 'NJP - Sittong - Lamahatta - Darjeeling',
     duration: '4N / 5D',
     priceFrom: 0,
     priceOriginal: 0,
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Sittong Orange Orchards', 'Lamahatta Pine Forests', 'Tiger Hill Sunrise', 'Mirik Lake'],
-    pickupDrop: 'Pickup from NJP and Drop to NJP',
-    inclusions: [
-      'Comfortable Accommodation',
-      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
-      'Transport: Hassle-free transportation. (Personal reservation car)',
-      'Personalized Experiences: Plan your trip to suit your interests and preferences',
-    ],
-    exclusions: [
-      'Outside food and Water',
-      'Entry fees',
-      'Parking charges',
-      'Any other charges that are not mentioned in the package',
-    ],
+    image: '/assets/darjelling5.jpg',
+    category: 'Darjeeling',
+    highlights: ['Sittong', 'Lamahatta', 'Tiger Hill', 'Mirik'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
     itinerary: [
-      {
-        day: 1,
-        title: 'NJP to Sittong',
-        description:
-          '🚗 Scenic transfer to Sittong.\n\n' +
-          '🛌 Night Stay: Sittong.',
-      },
-      {
-        day: 2,
-        title: 'Sittong to Lamahatta',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Ahaldara 360° View Point\n' +
-          '2. Namthing Pokhri\n' +
-          '3. Pine Forest\n' +
-          '4. Mongpo\n' +
-          '5. Jogi Ghat\n\n' +
-          '🛌 Night Stay: Lamahatta.',
-      },
-      {
-        day: 3,
-        title: 'Lamahatta to Darjeeling',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Peshok Tea Garden\n' +
-          '2. Tinchuley\n' +
-          '3. Tea Garden\n' +
-          '4. Gumbadara Viewpoint\n' +
-          '5. Lamahatta Eco Park\n\n' +
-          '🛌 Night Stay: Darjeeling.',
-      },
-      {
-        day: 4,
-        title: 'Darjeeling 10 points Sightseeing',
-        description:
-          '🌅 Early Morning (3:30 AM to 8:00 AM):\n' +
-          '1. Tiger Hill (if possible, depends upon the weather)\n' +
-          '2. Ghoom Railway Station\n' +
-          '3. Ghoom Monastery\n' +
-          '4. Batasia Loop\n\n' +
-          '☀️ After breakfast:\n' +
-          '5. Japanese Temple\n' +
-          '6. Peace Pagoda\n' +
-          '7. Zoo\n' +
-          '8. HMI\n' +
-          '9. Tenzing Rock\n\n' +
-          '🛌 Night Stay: Darjeeling (4-5 min walking distance from Mall).',
-      },
-      {
-        day: 5,
-        title: 'Darjeeling to NJP via Mirik',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Tingling View Point\n' +
-          '2. Mirik Lake\n' +
-          '3. Gopaldhara Tea Garden\n' +
-          '4. Pashupati Market\n' +
-          '5. India-Nepal Border\n' +
-          '6. Simana View Point\n' +
-          '7. Lepcha Jagat\n\n' +
-          '📍 Drop off at NJP.',
-      },
+      { day: 1, title: 'NJP to Sittong', description: 'Scenic transfer. Night Stay at Sittong.' },
+      { day: 2, title: 'Sittong to Lamahatta', description: 'Ahaldara 360 degree View point. Namthing Pokhri. Pine Forest. Mongpo. Jogi ghat. Night Stay at Lamahatta.' },
+      { day: 3, title: 'Lamahatta to Darjeeling', description: 'Peshok Tea Garden. Tinchuley. Tea Garden. Gumbadara Viewpoint. Lamahatta eco park. Nightstay at Darjeeling.' },
+      { day: 4, title: 'Darjeeling 10 points Sightseeing', description: 'Tiger Hill (weather permitting). Ghoom Railway Station. Ghoom Monastery. Batasia Loop. After breakfast: Japanese Temple. Peace Pagoda. Zoo. HMI. Tenzing Rock. Night Stay at Darjeeling (4-5 min walk from Mall).' },
+      { day: 5, title: 'Darjeeling to NJP via Mirik', description: 'Tingling View point. Mirik Lake. Gopaldhara Tea Garden. Pashupati Market. India-Nepal Border. Simana View Point. Lepcha Jagat. NJP drop.' },
     ],
-    tripDates: [
-      { date: 'Available Daily', availability: 'Available' },
-    ],
-    hotelDetails: 'Comfortable accommodation (Darjeeling hotel 4-5 min walking distance from Mall)',
-    notes: [
-      'The price of the package may vary depending on your chosen destination.',
-    ],
-    relatedPackages: ['offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d', 'darjeeling-offbeat-5n-6d'],
   },
   {
     id: 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d',
     slug: 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d',
     title: '4 Night 5 Days Offbeat Darjeeling Tour Package',
-    tagline: 'Discover the Hidden Gems of North Bengal',
-    location: 'NJP • Sittong • Takdah/Lamahatta • Lepcha Jagat',
+    tagline: 'Discover Hidden Gems',
+    location: 'Sittong - Lamahatta - Lepcha Jagat',
     duration: '4N / 5D',
     priceFrom: 0,
     priceOriginal: 0,
-    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Ahaldara 360° View Point', 'Takdah Pine Forest', 'Triveni Lovers Point', 'Lepcha Jagat'],
-    pickupDrop: 'Pickup from NJP and Drop to NJP',
-    inclusions: [
-      'Comfortable Accommodation',
-      'Views from every room',
-      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
-      'Transport: Hassle-free transportation (Personal reservation car)',
-      'Personalized Experiences: Plan your trip to suit your interests and preferences',
-    ],
-    exclusions: [
-      'Outside food and Water',
-      'Entry fees',
-      'Parking charges',
-      'Any other charges that are not mentioned in the package',
-    ],
+    image: '/assets/darjelling6.jpg',
+    category: 'Darjeeling',
+    highlights: ['Ahaldara', 'Takdah', 'Triveni', 'Lepcha Jagat'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
     itinerary: [
-      {
-        day: 1,
-        title: 'NJP to Sittong',
-        description:
-          '🚗 Sightseeing:\n' +
-          '1. Orange Garden\n' +
-          '2. Ahaldara 360° View Point\n' +
-          '3. Namthing Pokhri\n\n' +
-          '🛌 Night Stay: Sittong.',
-      },
-      {
-        day: 2,
-        title: 'Sittong to Takdah/Lamahatta',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Jogi Ghat\n' +
-          '2. Pine Forest\n' +
-          '3. Takdah\n' +
-          '4. Tea Garden\n' +
-          '5. Tinchuley\n\n' +
-          '🛌 Night Stay: Takdah/Lamahatta.',
-      },
-      {
-        day: 3,
-        title: 'Lamahatta Sightseeing',
-        description:
-          '🚗 Sightseeing:\n' +
-          '1. Gumbadara Viewpoint\n' +
-          '2. Pine Forest\n' +
-          '3. Lamahatta Eco Park\n' +
-          '4. Triveni View Point (Lovers Point)\n' +
-          '5. Peshok Tea Garden\n\n' +
-          '🛌 Night Stay: Takdah/Lamahatta.',
-      },
-      {
-        day: 4,
-        title: 'Takdah/Lamahatta to Lepcha Jagat',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Ghoom Railway Station\n' +
-          '2. Ghoom Monastery\n' +
-          '3. Batasia Loop\n' +
-          '4. Lepcha Jagat\n\n' +
-          '🛌 Night Stay: Lepcha Jagat.',
-      },
-      {
-        day: 5,
-        title: 'Lepcha Jagat to NJP via Mirik',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Lepcha Jagat\n' +
-          '2. Simana View Point\n' +
-          '3. India-Nepal Border\n' +
-          '4. Pashupati Market\n' +
-          '5. Gopaldhara Tea Garden\n' +
-          '6. Mirik Lake\n' +
-          '7. Tingling View Point\n\n' +
-          '📍 Drop off at NJP.',
-      },
+      { day: 1, title: 'NJP to Sittong', description: 'Orange Garden. Ahaldara 360 degree View point. Namthing Pokhri. Night Stay at Sittong.' },
+      { day: 2, title: 'Sittong to Takdah / Lamahatta', description: 'Jogi ghat. Pine Forest. Takdah. Tea Garden. Tinchuley. Night stay at Takdah/Lamahatta.' },
+      { day: 3, title: 'Lamahatta Sightseeing', description: 'Gumbadara Viewpoint. Pine forest. Lamahatta Eco Park. Triveni View point (Lovers point). Peshok Tea Garden. Night Stay at Takdah/Lamahatta.' },
+      { day: 4, title: 'Takdah / Lamahatta to Lepcha Jagat', description: 'Ghoom Railway Station. Ghoom Monastery. Batasia Loop. Lepcha Jagat. Nightstay at Lepcha Jagat.' },
+      { day: 5, title: 'Lepcha Jagat to NJP via Mirik', description: 'Simana View Point. India-Nepal Border. Pashupati Market. Gopaldhara Tea Garden. Mirik Lake. Tingling View point. NJP Drop.' },
     ],
-    tripDates: [
-      { date: 'Available Daily', availability: 'Available' },
-    ],
-    hotelDetails: 'Comfortable accommodation with views from every room',
-    notes: [
-      'The price of the package may vary depending on your chosen destination.',
-    ],
-    relatedPackages: ['darjeeling-offbeat-4n-5d', 'darjeeling-offbeat-5n-6d'],
   },
   {
     id: 'darjeeling-offbeat-5n-6d',
     slug: 'darjeeling-offbeat-5n-6d',
     title: '5 Night 6 Days Darjeeling & Offbeat Tour Package',
-    tagline: 'The Grand Tour of Queen of Hills & Surroundings',
-    location: 'NJP/Siliguri • Darjeeling • Bijanbari • Lamahatta • Sittong',
+    tagline: 'The Grand Tour',
+    location: 'Darjeeling - Bijanbari - Lamahatta - Sittong',
     duration: '5N / 6D',
     priceFrom: 0,
     priceOriginal: 0,
-    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1600&q=80',
-    highlights: ['Bijanbari Valley', 'Lamahatta Eco Park', 'Sittong Orange Gardens', 'Tiger Hill'],
-    pickupDrop: 'Pickup from NJP/Siliguri and Drop to NJP/Siliguri/Bagdogra',
+    image: '/assets/darjelling1.jpeg',
+    category: 'Darjeeling',
+    highlights: ['Bijanbari', 'Lamahatta', 'Sittong', 'Darjeeling'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'NJP / Siliguri to Darjeeling via Mirik', description: 'Tingling Viewpoint. Mirik Lake. Gopaldhara Tea Estate. Pashupati Market. India- Nepal Border. Simana Viewpoint. Lepcha Jagat. Nightstay at Darjeeling (3-5 min walk from Mall).' },
+      { day: 2, title: 'Darjeeling local Sightseeing', description: 'Tiger hill (weather permitting). Ghoom Railway Station. Ghoom Museum. Ghoom Monastery. Batasia Loop. After Breakfast: Japanese Temple. Peace Pagoda. Zoo. Tenzing Rock. HMI. Rope way. Mahakal Mandir. Mahakal Market. Mall road. Nightstay at Darjeeling.' },
+      { day: 3, title: 'Darjeeling to Bijanbari', description: 'Journey sightseeing included. Nightstay at Bijanbari.' },
+      { day: 4, title: 'Bijanbari to Lamahatta', description: 'Lamahatta Eco Park. Gumbadara View point. Peshok Tea Estates. Takdah. Tinchuley. Nightstay at Lamahatta.' },
+      { day: 5, title: 'Lamahatta to Sittong', description: 'Pine forest. Mongpo. Jogi ghat. Nightstay at Sittong.' },
+      { day: 6, title: 'Sittong to NJP / Siliguri / Bagdogra', description: 'Namthing Pokhri. Ahaldara 360 degree view point. Orange Garden. Drop off at NJP/Siliguri/Bagdogra.' },
+    ],
+  },
+  {
+    id: 'kalimpong-2n-3d',
+    slug: 'kalimpong-2n-3d',
+    title: '2 Night 3 Days Kalimpong Tour Package',
+    tagline: 'The Charm of Pedong and Kalimpong',
+    location: 'NJP - Pedong - Kalimpong',
+    duration: '2N / 3D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/kalinpong1.jpg',
+    category: 'Kalimpong',
+    highlights: ['Natural Pool', 'Milan Top', 'Deolo Hill'],
     inclusions: [
       'Comfortable Accommodation',
-      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner) (First day lunch to last day breakfast)',
-      'Transport: Hassle-free transportation. (Personal reservation car)',
-      'Personalized Experiences: Plan your trip to suit your interests and preferences',
+      'Delicious Food (Breakfast, Lunch, Evening snacks & Dinner)',
+      'Transport: Hassle-free transportation (Personal reservation car)',
     ],
     exclusions: [
       'Outside food and Water',
       'Entry fees',
       'Parking charges',
-      'Any other charges that are not mentioned in the package',
+      'Any other charges not mentioned in the package',
     ],
     itinerary: [
-      {
-        day: 1,
-        title: 'NJP/Siliguri to Darjeeling via Mirik',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Tingling Viewpoint\n' +
-          '2. Mirik Lake\n' +
-          '3. Gopaldhara Tea Estate\n' +
-          '4. Pashupati Market\n' +
-          '5. India-Nepal Border\n' +
-          '6. Simana Viewpoint\n' +
-          '7. Lepcha Jagat\n\n' +
-          '🛌 Night Stay: Darjeeling (3-5 min walking distance from Mall).',
-      },
-      {
-        day: 2,
-        title: 'Darjeeling Local Sightseeing',
-        description:
-          '🌅 Early Morning (3:30 AM to 8:30 AM):\n' +
-          '1. Tiger Hill (if possible, depends on weather)\n' +
-          '2. Ghoom Railway Station\n' +
-          '3. Ghoom Museum\n' +
-          '4. Ghoom Monastery\n' +
-          '5. Batasia Loop\n\n' +
-          '☀️ After Breakfast:\n' +
-          '6. Japanese Temple\n' +
-          '7. Peace Pagoda\n' +
-          '8. Padmaja Naidu Himalayan Zoological Park (Zoo)\n' +
-          '9. Tenzing Rock\n' +
-          '10. Himalayan Mountaineering Institute (HMI)\n' +
-          '11. Rope Way\n\n' +
-          '🌙 Evening:\n' +
-          '12. Mahakal Mandir\n' +
-          '13. Mahakal Market\n' +
-          '14. Mall Road\n\n' +
-          '🛌 Night Stay: Darjeeling.',
-      },
-      {
-        day: 3,
-        title: 'Darjeeling to Bijanbari',
-        description:
-          '🚗 Sightseeing en route during the journey.\n\n' +
-          '🛌 Night Stay: Bijanbari.',
-      },
-      {
-        day: 4,
-        title: 'Bijanbari to Lamahatta',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Lamahatta Eco Park\n' +
-          '2. Gumbadara View Point\n' +
-          '3. Peshok Tea Estates\n' +
-          '4. Takdah\n' +
-          '5. Tinchuley\n\n' +
-          '🛌 Night Stay: Lamahatta.',
-      },
-      {
-        day: 5,
-        title: 'Lamahatta to Sittong',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Pine Forest\n' +
-          '2. Mongpo\n' +
-          '3. Jogi Ghat\n\n' +
-          '🛌 Night Stay: Sittong.',
-      },
-      {
-        day: 6,
-        title: 'Sittong to NJP/Siliguri/Bagdogra',
-        description:
-          '🚗 Sightseeing en route:\n' +
-          '1. Namthing Pokhri\n' +
-          '2. Ahaldara 360° View Point\n' +
-          '3. Orange Garden\n\n' +
-          '📍 Drop off at NJP/Siliguri Jn./Bagdogra Airport.',
-      },
+      { day: 1, title: 'NJP to Pedong', description: 'Reached at our homestay at Pedong. After having lunch and taking some rest, visit the Natural Swimming pool with Waterfall. Milan Top. I Love Pedong Viewpoint. A old Monastery by walk. At evening & night, enjoy the view of beautiful Kanchenjunga & Stars from the Balcony of your room. Nightstay at Pedong.' },
+      { day: 2, title: 'Kalimpong 7 Points Sightseeing', description: 'Deolo hill. Deolo Park. Durpin Dara Hill & Zang Dhok Palri Monastery. Pine View Nursery. Hanuman Tok. Mangal Dham Temple. Lepcha Museum / Nature Interpretation Centre. Gouripur House / Science Centre / Dr. Graham\'s Homes. Nightstay at Pedong.' },
+      { day: 3, title: 'Kalimpong to NJP drop', description: 'Teesta. Teesta valley Tea Garden. Teesta Valley Viewpoint. Sevoke Coronation Bridge. NJP drop.' },
     ],
-    tripDates: [
-      { date: 'Available Daily', availability: 'Available' },
+  },
+  {
+    id: 'kalimpong-3n-4d',
+    slug: 'kalimpong-3n-4d',
+    title: '3 Night 4 Days Kalimpong Tour Package',
+    tagline: 'Extended Kalimpong Experience',
+    location: 'NJP - Pedong - Sillerygaon',
+    duration: '3N / 4D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/kalingpong2.jpg',
+    category: 'Kalimpong',
+    highlights: ['Sillerygaon', 'Lava', 'Rishop'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'NJP to Pedong', description: 'Reached at our homestay at Pedong. After having lunch and taking some rest, visit the Natural Swimming pool with Waterfall. Milan Top. I Love Pedong Viewpoint. A old Monastery by walk. Nightstay at Pedong.' },
+      { day: 2, title: 'Kalimpong 7 Points Sightseeing', description: 'Deolo hill. Deolo Park. Durpin Dara Hill & Zang Dhok Palri Monastery. Pine View Nursery. Hanuman Tok. Mangal Dham Temple. Lepcha Museum. Nightstay at Pedong.' },
+      { day: 3, title: 'Sightseeing: Lava and Rishop', description: 'Sillerygaon. Lava. Lava Monastery. 7 stupas temple. Rishop. Lolegaon. Nightstay at sillery gaaon.' },
+      { day: 4, title: 'Sillerygaon to NJP drop', description: 'NJP drop.' },
     ],
-    hotelDetails: 'Comfortable accommodation',
-    notes: [
-      'The price of the package may vary depending on your chosen destination.',
+  },
+  {
+    id: 'darjeeling-gangtok-4n-5d',
+    slug: 'darjeeling-gangtok-4n-5d',
+    title: '4 Night 5 Days Darjeeling - Gangtok Regular Package',
+    tagline: 'Best of Both Worlds',
+    location: 'NJP - Darjeeling - Gangtok',
+    duration: '4N / 5D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/gangtok.jpeg',
+    category: 'Sikkim',
+    highlights: ['Tiger Hill', 'MG Marg', 'Tashi View Point'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'NJP/Siliguri Jn./Bagdogra to Darjeeling', description: 'Kurseong Valley View Point. Ghoom Monastery. Batasia Loop. Ghoom Railway Museum. Mall Road (Evening leisure walk). Nightstay at Darjeeling (Hotel 4-5 min walking distance from Mall Road).' },
+      { day: 2, title: 'Darjeeling Local Sightseeing (10 Points)', description: 'Tiger Hill (Sunrise, weather permitting). Japanese Temple. Peace Pagoda. Zoo. Himalayan Mountaineering Institute (HMI). Tenzing Rock. Nightstay at Darjeeling.' },
+      { day: 3, title: 'Darjeeling to Gangtok Transfer', description: 'via Teesta River Valley. En route sightseeing: Teesta River View Point. Nightstay at Gangtok (Hotel walking distance from MG Marg).' },
+      { day: 4, title: 'Gangtok Local Sightseeing (10 Points)', description: 'Tashi View Point. Ganesh Tok. Hanuman Tok. Enchey Monastery. Do Drul Chorten Stupa. Namgyal Institute of Tibetology. Flower Exhibition Centre. Ropeway (Cable Car). Bakthang Waterfall. Nightstay at Gangtok.' },
+      { day: 5, title: 'Gangtok to NJP/Siliguri Jn./Bagdogra (Drop)', description: 'Return journey. Drop off at NJP/Siliguri/Bagdogra.' },
     ],
-    relatedPackages: ['darjeeling-offbeat-4n-5d', 'offbeat-darjeeling-sittong-lamahatta-lepcha-4n-5d'],
+  },
+  {
+    id: 'gangtok-changu-3n-4d',
+    slug: 'gangtok-changu-3n-4d',
+    title: '3 Night 4 Days Gangtok + Changu Lake Tour',
+    tagline: 'Snowy Peaks and Sacred Lakes',
+    location: 'NJP - Gangtok - Changu Lake',
+    duration: '3N / 4D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/sikkim1.jpeg',
+    category: 'Sikkim',
+    highlights: ['Changu Lake', 'Baba Mandir', 'MG Marg'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'NJP / Bagdogra to Gangtok', description: 'Pickup from NJP Railway Station / Bagdogra Airport. Scenic drive to Gangtok. Hotel check-in. Overnight stay in Gangtok.' },
+      { day: 2, title: 'Changu (Tsomgo) Lake & Baba Mandir', description: 'Early breakfast. Visit Changu / Tsomgo Lake. Visit Baba Harbhajan Singh Mandir. Return to Gangtok. Evening leisure. Overnight stay in Gangtok.' },
+      { day: 3, title: 'Gangtok Sightseeing', description: 'Tashi View Point. Ganesh Tok. Hanuman Tok. Bakthang Waterfall. Flower Exhibition Centre. Do-Drul Chorten Stupa. Ropeway Ride (optional). Overnight in Gangtok.' },
+      { day: 4, title: 'Gangtok to NJP', description: 'Breakfast. Hotel checkout. NJP Drop.' },
+    ],
+  },
+  {
+    id: 'gangtok-2n-3d',
+    slug: 'gangtok-2n-3d',
+    title: '2 Night 3 Days Gangtok Itinerary',
+    tagline: 'Quick Escape to Sikkim',
+    location: 'NJP - Gangtok',
+    duration: '2N / 3D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/sikkim2.jpeg',
+    category: 'Sikkim',
+    highlights: ['Tashi View Point', 'Flower Show'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'NJP / Bagdogra to Gangtok', description: 'Pickup from NJP Railway Station / Bagdogra Airport. Scenic drive to Gangtok. Hotel check-in. Overnight stay in Gangtok.' },
+      { day: 2, title: 'Gangtok Sightseeing', description: 'Tashi View Point. Ganesh Tok. Hanuman Tok. Bakthang Waterfall. Flower Exhibition Centre. Do-Drul Chorten Stupa. Ropeway Ride (optional). Overnight in Gangtok.' },
+      { day: 3, title: 'Gangtok to NJP / Bagdogra', description: 'Breakfast. Hotel checkout. Drive back to NJP / Bagdogra.' },
+    ],
+  },
+  {
+    id: 'north-sikkim-darjeeling-6n-7d',
+    slug: 'north-sikkim-darjeeling-6n-7d',
+    title: '6 Night 7 Days North Sikkim and Darjeeling Tour',
+    tagline: 'The Ultimate Himalayan Journey',
+    location: 'Lachung - Yumthang - Darjeeling',
+    duration: '6N / 7D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/silkroute1.jpeg',
+    category: 'Sikkim',
+    highlights: ['Yumthang', 'Zero Point', 'Darjeeling Mall'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'NJP to Gangtok', description: 'Arrival at NJP and a smooth drive to the beautiful capital city of Sikkim. Relax and enjoy the peaceful mountain vibes. Overnight Stay: Gangtok.' },
+      { day: 2, title: 'Gangtok to Lachung', description: 'A scenic mountain drive through rivers, waterfalls, and valleys. Feel the freshness of North Sikkim as you reach Lachung. Overnight Stay: Lachung.' },
+      { day: 3, title: 'Lachung Sightseeing', description: 'Wake up to snow-kissed peaks and calm surroundings. Sightseeing Includes: Yumthang Valley and Zero Point. After sightseeing, return to the hotel. Rest and enjoy the silent charm of the mountains. Overnight Stay: Lachung.' },
+      { day: 4, title: 'Lachung to Gangtok', description: 'Bid farewell to the high mountains and travel back to Gangtok with unforgettable memories. Overnight Stay: Gangtok.' },
+      { day: 5, title: 'Gangtok Leisure', description: 'Tour ends with beautiful moments, photographs, and stories to remember forever.' },
+      { day: 6, title: 'Gangtok to Darjeeling', description: 'Lamahatta eco park. Lover\'s point. peshok tea garden. Overnight Stay: Darjeeling.' },
+      { day: 7, title: 'Darjeeling to NJP via Mirik', description: 'Lepcha Jagat. Simana View Point. Pashupati Market. India - Nepal Border. Gopaldara Tea Garden. Mirik Lake. Tingling View Point.' },
+    ],
+  },
+  {
+    id: 'north-sikkim-4n-5d',
+    slug: 'north-sikkim-4n-5d',
+    title: '4 Night 5 Days North Sikkim Tour',
+    tagline: 'Calm and Purity',
+    location: 'Gangtok - Lachung - Yumthang',
+    duration: '4N / 5D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/gangtok.jpeg',
+    category: 'Sikkim',
+    highlights: ['Lachung', 'Yumthang', 'Zero Point'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'NJP to Gangtok', description: 'Arrival at NJP and a smooth drive to the beautiful capital city of Sikkim. Relax and enjoy the peaceful mountain vibes. Overnight Stay: Gangtok.' },
+      { day: 2, title: 'Gangtok to Lachung', description: 'A scenic mountain drive through rivers, waterfalls, and valleys. Feel the freshness of North Sikkim as you reach Lachung. Overnight Stay: Lachung.' },
+      { day: 3, title: 'Lachung Sightseeing', description: 'Wake up to snow-kissed peaks and calm surroundings. Sightseeing Includes: Yumthang Valley and Zero Point. After sightseeing, return to the hotel. Rest and enjoy the silent charm of the mountains. Overnight Stay: Lachung.' },
+      { day: 4, title: 'Lachung to Gangtok', description: 'Bid farewell to the high mountains and travel back to Gangtok with unforgettable memories. Overnight Stay: Gangtok.' },
+      { day: 5, title: 'Gangtok to NJP', description: 'Tour ends with beautiful moments, photographs, and stories to remember forever.' },
+    ],
+  },
+  {
+    id: 'kashmir-group-trip',
+    slug: 'kashmir-group-trip',
+    title: '5 Night 6 Days Kashmir Special Group Departure',
+    tagline: 'Experience Paradise on Earth',
+    location: 'Srinagar - Gulmarg - Pahalgam - Sonamarg',
+    duration: '5N / 6D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/kashmir.jpg',
+    category: 'Kashmir',
+    highlights: ['Dal Lake Shikara Ride', 'Gulmarg Gondola', 'Pahalgam Valley', 'Sonamarg Glaciers'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'Arrival in Srinagar', description: 'Transfer to Houseboat. Evening Shikara ride on Dal Lake. Overnight stay at Houseboat.' },
+      { day: 2, title: 'Srinagar to Gulmarg', description: 'Visit Gulmarg, the Meadow of Flowers. Enjoy Gondola ride (Phase 1 & 2). Overnight stay at Gulmarg/Srinagar.' },
+      { day: 3, title: 'Gulmarg to Pahalgam', description: 'Transfer to Pahalgam, the Valley of Shepherds. Visit Betaab Valley and Aru Valley. Overnight stay at Pahalgam.' },
+      { day: 4, title: 'Pahalgam to Srinagar', description: 'Return to Srinagar. Visit Mughal Gardens (Nishat & Shalimar). Overnight stay at Srinagar.' },
+      { day: 5, title: 'Sonamarg Day Trip', description: 'Full day excursion to Sonamarg, the Meadow of Gold. Visit Thajiwas Glacier. Return to Srinagar for overnight stay.' },
+      { day: 6, title: 'Departure from Srinagar', description: 'Morning breakfast and transfer to Srinagar Airport for your return flight.' },
+    ],
+  },
+  {
+    id: 'manali-group-trip',
+    slug: 'manali-group-trip',
+    title: '4 Night 5 Days Manali Adventure Group Trip',
+    tagline: 'The Mountains are Calling',
+    location: 'Manali - Solang Valley - Rohtang Pass - Kullu',
+    duration: '4N / 5D',
+    priceFrom: 0,
+    priceOriginal: 0,
+    image: '/assets/manali.jpg',
+    category: 'Manali',
+    highlights: ['Solang Valley Adventures', 'Rohtang Pass Snow', 'Hadimba Temple', 'Kullu River Rafting'],
+    inclusions: standardInclusions,
+    exclusions: standardExclusions,
+    itinerary: [
+      { day: 1, title: 'Arrival in Manali', description: 'Arrival and hotel check-in. Evening walk to Mall Road and local markets. Overnight stay in Manali.' },
+      { day: 2, title: 'Manali Local Sightseeing', description: 'Visit Hadimba Devi Temple, Vashisth Hot Water Springs, and Tibetan Monastery. Overnight stay in Manali.' },
+      { day: 3, title: 'Solang Valley & Rohtang Pass', description: 'Full day excursion to Solang Valley for adventure sports. Optional visit to Rohtang Pass (subject to permit). Overnight stay in Manali.' },
+      { day: 4, title: 'Kullu & Manikaran', description: 'Day trip to Kullu for River Rafting and Manikaran Sahib Gurudwara. Overnight stay in Manali.' },
+      { day: 5, title: 'Departure from Manali', description: 'Breakfast and checkout. Transfer to Volvo Bus Stand for return journey.' },
+    ],
   },
 ]
 
@@ -540,5 +388,6 @@ export function getPackageBySlug(slug) {
 }
 
 export function getRelatedPackages(slugs) {
+  if (!slugs) return []
   return tourPackages.filter((p) => slugs.includes(p.slug))
 }
