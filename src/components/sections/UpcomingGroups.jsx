@@ -68,7 +68,7 @@ export default function UpcomingGroups({ packages }) {
       </div>
 
       <div className="relative mt-12 w-full overflow-hidden py-10">
-        <div className="mx-auto flex max-w-[1500px] items-center justify-center gap-4 px-10">
+        <div className="mx-auto flex max-w-[1500px] items-center justify-center gap-4 px-4 sm:px-10">
           <AnimatePresence mode="popLayout" initial={false}>
             {displayGroups.map((group, idx) => {
               let scale = 0.9
@@ -136,7 +136,7 @@ export default function UpcomingGroups({ packages }) {
                     }}
                     className={`relative flex-none transition-shadow duration-500 ${idx === 0 || idx === 4 ? 'hidden lg:block w-[200px]' :
                       idx === 1 || idx === 3 ? 'hidden sm:block w-[300px] lg:w-[280px]' :
-                        'w-[75vw] sm:w-[420px] lg:w-[380px]'
+                        'w-[65vw] sm:w-[420px] lg:w-[380px]'
                       }`}
                   >
                   <div className={`transition-all duration-500 ${idx === 2 ? 'shadow-2xl ring-2 ring-wine-accent/30 rounded-2xl' : ''}`}>
@@ -148,7 +148,7 @@ export default function UpcomingGroups({ packages }) {
                       style={{ backfaceVisibility: 'hidden' }}
                     >
                       {/* Image Section (Top Half) */}
-                      <div className="relative h-[160px] w-full overflow-hidden">
+                      <div className="relative h-[120px] sm:h-[160px] w-full overflow-hidden">
                         <img
                           src={group.overrideImage || group.image}
                           alt={group.overridePlace || group.title}
@@ -165,7 +165,7 @@ export default function UpcomingGroups({ packages }) {
                       </div>
 
                       {/* Content Section (Bottom Half) */}
-                      <div className="flex flex-col flex-grow p-4 space-y-1.5">
+                      <div className="flex flex-col flex-grow p-3 sm:p-4 space-y-1 sm:space-y-1.5">
 
                         {/* Top Meta Row (Duration & Group) */}
                         <div className="flex items-center justify-between text-[11px] text-white/80 font-medium">

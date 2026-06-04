@@ -31,13 +31,13 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt={site.name}
-              className="relative h-14 w-14 sm:h-20 sm:w-20 rounded-xl object-contain border-2 border-white/20 brightness-125 contrast-110 transition-all duration-500 group-hover:scale-110 group-hover:brightness-150"
+              className="relative h-16 w-16 sm:h-20 sm:w-20 rounded-xl object-contain border-2 border-white/20 brightness-125 contrast-110 transition-all duration-500 group-hover:scale-110 group-hover:brightness-150"
               style={{ boxShadow: '0 0 20px 8px rgba(200,50,80,0.5), 0 0 60px 20px rgba(200,50,80,0.25)' }}
             />
           </div>
           <div className="leading-tight">
-            <p className="text-sm font-semibold tracking-tight text-white">{site.name}</p>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-white/80 font-bold">{site.tagline}</p>
+            <p className="text-xs sm:text-sm font-semibold tracking-tight text-white">Tours and Travel</p>
+            <p className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/80 font-bold">{site.tagline}</p>
           </div>
         </NavLink>
 
